@@ -24,3 +24,20 @@ link-col: "#666666"
 
 # Layout
 title-on-all-pages: false
+
+# Remove blog-related settings
+paginate: 0
+feed_show_excerpt: false
+feed_show_tags: false
+post_search: false
+
+# Exclude blog posts and related files
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - _posts/
+  - docs/
