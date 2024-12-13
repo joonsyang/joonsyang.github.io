@@ -1,53 +1,26 @@
-############################
-# --- Required options --- #
-############################
-
-# Name of website
-title: JOONSEOK YANG
-
-# Your name to show in the footer
+# Basic settings
+title: "JOONSEOK YANG"
 author: JOONSEOK YANG
 
-###############################################
-# --- Navigation Links --- #
-###############################################
-
+# Navigation
 navbar-links:
-  About: "/"
+  HOME: "/"
   CV: "cv"
-  Research: "research"
+  RESEARCH: "research"
 
-################
-# --- Logo --- #
-################
-
-# Profile image in the navigation bar (optional)
-# avatar: "/assets/img/profile-photo.jpg"
-round-avatar: true
-
-###########################
-# --- General options --- #
-###########################
-
-# Remove blog posts and related features
+# Remove any blog-related settings
+paginate: 0
 feed_show_excerpt: false
 feed_show_tags: false
 post_search: false
 
-# Default YAML values
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "page"
+# Colors
+navbar-col: "#8B7765"  # Brown color similar to the example
+navbar-text-col: "#FFFFFF"
+navbar-border-col: "#8B7765"
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#666666"
 
-# Exclude blog posts and related files
-exclude:
-  - CHANGELOG.md
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - _posts/
+# Layout
+title-on-all-pages: false
