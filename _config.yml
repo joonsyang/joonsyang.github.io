@@ -13,7 +13,7 @@ author: Your Name # Replace with your actual name
 ###############################################
 
 navbar-links:
-  About: "about"
+  About: "/"  # About is now the home page
   CV: "cv"
   Research: "research"
 
@@ -67,6 +67,11 @@ defaults:
       path: ""
     values:
       layout: "page"
+  -
+    scope:
+      path: "index.md"  # This ensures the home page uses the proper layout
+    values:
+      layout: "home"
 
 # Plugins
 plugins:
