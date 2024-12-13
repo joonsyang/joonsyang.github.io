@@ -30,9 +30,9 @@ round-avatar: true
 #####################################
 
 social-network-links:
-  email: "your.email@institution.edu"
-  github: yourusername
-  google-scholar: your-scholar-id
+  email: "jsyangpp@gmail.com"
+  github: joonsyang
+  google-scholar: https://scholar.google.com/citations?user=k3Z2rl4AAAAJ&hl=en
   # orcid: your-orcid-id  # Uncomment if you want to add ORCID
   # twitter: yourusername  # Uncomment if you want to add Twitter
 
@@ -75,4 +75,4 @@ defaults:
 
 # Plugins
 plugins:
-  - jekyll-sitemap
+
