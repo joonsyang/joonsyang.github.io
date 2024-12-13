@@ -1,37 +1,49 @@
-# Basic settings
+############################
+# --- Basic settings --- #
+############################
+
 title: "JOONSEOK YANG"
 author: JOONSEOK YANG
 
-# Navigation
-navbar-links:
-  HOME: "/"
-  CV: "cv"
-  RESEARCH: "research"
+###############################################
+# --- Navigation --- #
+###############################################
 
-# Remove any blog-related settings
-paginate: 0
-feed_show_excerpt: false
-feed_show_tags: false
-post_search: false
+navbar-links:
+  About: "/"
+  CV: "cv"
+  Research: "research"
+
+###########################
+# --- Layout & Design --- #
+###########################
 
 # Colors
-navbar-col: "#8B7765"  # Brown color similar to the example
-navbar-text-col: "#FFFFFF"
-navbar-border-col: "#8B7765"
+navbar-col: "#EAEAEA"  # Light gray for navigation
+navbar-text-col: "#404040"  # Dark gray for text
+navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#666666"
 
-# Layout
+# Layout settings
 title-on-all-pages: false
+round-avatar: false
+navbar-var-length: true
 
-# Remove blog-related settings
+###########################
+# --- Remove Blog Features --- #
+###########################
+
 paginate: 0
+post_search: false
 feed_show_excerpt: false
 feed_show_tags: false
-post_search: false
 
-# Exclude blog posts and related files
+###########################
+# --- Exclude Files --- #
+###########################
+
 exclude:
   - CHANGELOG.md
   - CNAME
