@@ -3,17 +3,17 @@
 ############################
 
 # Name of website
-title: Your Name # Replace with your actual name
+title: JOONSEOK YANG
 
 # Your name to show in the footer
-author: Your Name # Replace with your actual name
+author: JOONSEOK YANG
 
 ###############################################
 # --- Navigation Links --- #
 ###############################################
 
 navbar-links:
-  About: "/"  # About is now the home page
+  About: "/"
   CV: "cv"
   Research: "research"
 
@@ -22,43 +22,17 @@ navbar-links:
 ################
 
 # Profile image in the navigation bar (optional)
-# avatar: "/assets/img/profile-photo.jpg"  # Uncomment and update path to add your photo
+# avatar: "/assets/img/profile-photo.jpg"
 round-avatar: true
-
-#####################################
-# --- Footer social media links --- #
-#####################################
-
-social-network-links:
-  email: "jsyangpp@gmail.com"
-  github: joonsyang
-  google-scholar: https://scholar.google.com/citations?user=k3Z2rl4AAAAJ&hl=en
-  # orcid: your-orcid-id  # Uncomment if you want to add ORCID
-  # twitter: yourusername  # Uncomment if you want to add Twitter
 
 ###########################
 # --- General options --- #
 ###########################
 
-# Basic color scheme for an academic website
-page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#005DAA"  # More professional blue
-hover-col: "#004080"
-navbar-col: "#F5F5F5"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-footer-col: "#F5F5F5"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-
-# Add a search button to the navbar
+# Remove blog posts and related features
+feed_show_excerpt: false
+feed_show_tags: false
 post_search: false
-
-# Jekyll configurations
-timezone: "America/New_York"  # Adjust to your timezone
-markdown: kramdown
-permalink: /:title/
 
 # Default YAML values
 defaults:
@@ -67,12 +41,13 @@ defaults:
       path: ""
     values:
       layout: "page"
-  -
-    scope:
-      path: "index.md"  # This ensures the home page uses the proper layout
-    values:
-      layout: "home"
 
-# Plugins
-plugins:
-
+# Exclude blog posts and related files
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - _posts/
