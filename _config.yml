@@ -51,3 +51,7 @@ exclude:
   - README.md
   - _posts/
   - docs/
+
+site-css:
+  - "/assets/css/custom.css"
+  
