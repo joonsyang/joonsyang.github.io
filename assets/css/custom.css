@@ -1,28 +1,28 @@
-.navbar-custom {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.navbar-custom .navbar-brand {
-  padding-left: 15px !important;
-  margin-right: 30px !important;
-}
-
-.navbar-custom .navbar-nav {
-  margin-left: auto !important;
-}
-
-.navbar-custom .nav-item:last-child a {
-  padding-right: 20px !important;
-}
-
-/* 모바일 반응형 대응 */
-@media (max-width: 1200px) {
-  .navbar-custom .navbar-brand {
-    padding-left: 15px !important;
+html body {
+  .navbar > .container {
+    padding-left: 0;
+    padding-right: 0;
   }
   
-  .navbar-custom .navbar-toggler {
+  .navbar-custom {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .navbar-custom .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .navbar-custom .navbar-brand {
+    margin-left: 15px !important;
+  }
+  
+  .navbar-nav.ml-auto {
+    margin-right: 0 !important;
+  }
+  
+  .navbar-nav.ml-auto .nav-item:last-child {
     margin-right: 15px !important;
   }
 }
