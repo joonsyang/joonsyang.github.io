@@ -1124,19 +1124,18 @@ pre {
   }
 }
 
-body .navbar-custom {
-  padding: 0 20px !important;
+.navbar-custom {
+  padding: 0 !important;
 }
 
-body .navbar-custom .navbar-brand {
-  margin-left: 20 !important;
-  padding-left: 0 !important;
+.navbar-custom .navbar-brand {
+  padding-left: 20px !important;
 }
 
-body .navbar-custom .navbar-nav.ml-auto {
-  margin-right: 20 !important;
+.navbar-custom .nav-item:last-child {
+  padding-right: 20px !important;
 }
 
-body .navbar-custom .nav-item:last-child {
-  padding-right: 0 !important;
+.navbar-expand-xl .navbar-nav {
+  margin-left: auto !important;  /* 메뉴를 오른쪽으로 밀어냄 */
 }
