@@ -64,9 +64,18 @@ nav.navbar-custom .nav-link {
   line-height: 1.6;
 }
 
-/* Article title style */
-.content-section li strong {
-  font-weight: normal;
+/* Link indent and style */
+.content-section li a {
+  margin-left: 1em;
+  color: #666;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.content-section li a:hover {
+  color: #2F3438;
+  text-decoration: underline;
 }
 
 /* Journal name style */
