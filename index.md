@@ -4,9 +4,8 @@ title: JOONSEOK YANG
 subtitle: Associate Professor <br> Department of Political Science & Diplomacy, <br> Sungkyunkwan University
 ---
 
-{: .fs-5 }
 <div style="display: flex; gap: 50px; max-width: 1200px; margin: 0 auto;">
-  <div style="flex: 0 0 300px;">
+  <div style="flex: 0 0 200px;">
     <img src="assets/img/profile.jpg" alt="Joonseok Yang" style="width: 100%; margin-bottom: 20px;">
     <p style="margin: 0;">✉️ jsyang01@skku.edu</p>
     <p style="margin: 0;">📞 82-02-760-0381</p>
