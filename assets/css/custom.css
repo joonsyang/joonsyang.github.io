@@ -9,10 +9,10 @@
 
 .navbar-custom .navbar-brand {
   padding-right: 0;
-  margin-right: 1rem;  /* 이 값을 줄여서 간격을 좁힙니다 */
+  margin-right: 0rem;  /* 이 값을 줄여서 간격을 좁힙니다 */
 }
 
 .navbar-custom .navbar-nav {
   margin-left: 0;  /* 왼쪽 여백을 없앱니다 */
-  margin-right: 1rem;
+  margin-right: 3rem;
 }
