@@ -3,15 +3,15 @@ layout: page
 ---
 
 <div style="text-align: center; margin-bottom: 50px;">
-<h1 style="font-size: 32px; margin-bottom: 10px;">JOONSEOK YANG</h1>
-<div style="font-size: 16px; color: #666;">
+<h1 style="font-size: 40px; margin-bottom: 10px;">JOONSEOK YANG</h1>
+<div style="font-size: 20px; color: #666;">
 <p style="margin: 5px 0;">Associate Professor</p>
 <p style="margin: 5px 0;">Department of Political Science & Diplomacy</p>
 <p style="margin: 5px 0;">Sungkyunkwan University</p>
 </div>
 </div>
 
-<div style="display: flex; gap: 50px; max-width: 1200px; margin: 0 auto;">
+<div style="display: flex; gap: 50px; max-width: 1800px; margin: 0 auto; padding: 0 20px;">
   <div style="flex: 0 0 200px;">
     <img src="assets/img/profile.jpg" alt="Joonseok Yang" style="width: 100%; margin-bottom: 20px;">
     <p style="margin: 0;">✉️ jsyang01@skku.edu</p>
