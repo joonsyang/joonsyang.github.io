@@ -1,14 +1,12 @@
 ############################
 # --- Basic settings --- #
 ############################
-
 title: "JOONSEOK YANG"
 author: JOONSEOK YANG
 
 ###############################################
 # --- Navigation --- #
 ###############################################
-
 navbar-links:
   About: "/"
   CV: "cv"
@@ -17,7 +15,6 @@ navbar-links:
 ###########################
 # --- Layout & Design --- #
 ###########################
-
 # Colors
 navbar-col: "#EAEAEA"  # Light gray for navigation
 navbar-text-col: "#404040"  # Dark gray for text
@@ -31,10 +28,13 @@ title-on-all-pages: false
 round-avatar: false
 navbar-var-length: true
 
+# Custom CSS
+site-css:
+  - "/assets/css/custom-styles.css"
+
 ###########################
 # --- Remove Blog Features --- #
 ###########################
-
 paginate: 0
 post_search: false
 feed_show_excerpt: false
@@ -43,7 +43,6 @@ feed_show_tags: false
 ###########################
 # --- Exclude Files --- #
 ###########################
-
 exclude:
   - CHANGELOG.md
   - CNAME
