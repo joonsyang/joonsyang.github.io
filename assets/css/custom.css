@@ -47,36 +47,55 @@ nav.navbar-custom .nav-link {
 
 
 /* Research page styles */
-.page-heading {
-  margin-bottom: 2rem;
+.content-section {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Publication list styles */
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-ul {
+.content-section ul {
   list-style: none;
   padding-left: 0;
 }
 
-li {
+.content-section li {
   margin-bottom: 1.5rem;
+  text-align: left;
+  line-height: 1.6;
 }
 
-/* Journal name italics */
-em {
+/* Article title style */
+.content-section li strong {
+  font-weight: normal;
+}
+
+/* Journal name style */
+.content-section em {
   font-style: italic;
-}
-
-/* Links style */
-a {
   color: #666;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Co-authors style */
+.content-section li [class^="with"] {
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Heading styles */
+.content-section h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  color: #2F3438;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content-section li {
+    margin-bottom: 2rem;
+  }
+  
+  .content-section {
+    padding: 0 1rem;
+  }
 }
