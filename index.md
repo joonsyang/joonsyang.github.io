@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<div style="text-align: center; margin-bottom: 50px;">
+<div style="text-align: center; margin-bottom: 30px; margin-top: -20px;">
 <h1 style="font-size: 40px; margin-bottom: 10px;">JOONSEOK YANG</h1>
 <div style="font-size: 20px; color: #666;">
 <p style="margin: 5px 0;">Associate Professor</p>
