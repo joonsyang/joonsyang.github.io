@@ -7,14 +7,18 @@ author: JOONSEOK YANG
 ###############################################
 # --- Navigation --- #
 ###############################################
+###############################################
+# --- Navigation --- #
+###############################################
 navbar-links:
-  About: "/"
+  HOME: "/"
   CV: "cv"
-  Research: "research"
+  RESEARCH: "research"
 
-# Enable variable length for navbar
-navbar-var-length: true
-navbar-right-padding: 20px   # Add padding to the right of navbar
+# 기존 navbar 색상 설정 제거 또는 수정
+navbar-col: ""
+navbar-text-col: ""
+navbar-border-col: ""
 
 ###########################
 # --- Layout & Design --- #
