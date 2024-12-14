@@ -1,0 +1,8 @@
+.page-heading {
+  font-size: 2em !important;
+}
+
+.page-heading + p {
+  font-size: 0.9em !important;
+  line-height: 1.8 !important;
+}
