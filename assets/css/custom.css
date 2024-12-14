@@ -14,10 +14,11 @@ body div.navbar-custom,
   z-index: 1030 !important;
 }
 
-/* Main content padding for fixed navbar */
+/* 본문 상단 여백 조정 */
 body {
-  padding-top: 60px !important;
+  padding-top: 30px !important;  /* 이 값을 줄여보세요 */
 }
+
 
 .intro-header,
 .page-heading {
