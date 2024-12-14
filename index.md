@@ -11,7 +11,7 @@ layout: page
 </div>
 </div>
 
-<div style="display: flex; gap: 50px; max-width: 1800px; margin: 0 auto; padding: 0 20px;">
+<div style="display: flex; gap: 50px; max-width: 1500px; margin: 0 auto; padding: 0 20px;">
   <div style="flex: 0 0 200px;">
     <img src="assets/img/profile.jpg" alt="Joonseok Yang" style="width: 100%; margin-bottom: 20px;">
     <p style="margin: 0;">✉️ jsyang01@skku.edu</p>
