@@ -1129,12 +1129,12 @@ body .navbar-custom {
 }
 
 body .navbar-custom .navbar-brand {
-  margin-left: 0 !important;
+  margin-left: 20 !important;
   padding-left: 0 !important;
 }
 
 body .navbar-custom .navbar-nav.ml-auto {
-  margin-right: 0 !important;
+  margin-right: 20 !important;
 }
 
 body .navbar-custom .nav-item:last-child {
