@@ -12,6 +12,10 @@ navbar-links:
   CV: "cv"
   Research: "research"
 
+# Enable variable length for navbar
+navbar-var-length: true
+navbar-right-padding: 20px   # Add padding to the right of navbar
+
 ###########################
 # --- Layout & Design --- #
 ###########################
@@ -26,11 +30,6 @@ link-col: "#666666"
 # Layout settings
 title-on-all-pages: false
 round-avatar: false
-navbar-var-length: true
-
-# Custom CSS
-site-css:
-  - "/assets/css/custom-styles.css"
 
 ###########################
 # --- Remove Blog Features --- #
