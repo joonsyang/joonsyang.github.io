@@ -1,10 +1,5 @@
 .navbar-custom {
   background-color: #2F3438 !important;  /* 세련된 다크 그레이 */
-  /* 또는 */
-  /* background-color: #1F2937 !important;  /* 딥 네이비 톤의 다크 그레이 */ 
-  /* 또는 */
-  /* background-color: #374151 !important;  /* 부드러운 다크 그레이 */
-  
   padding: 1rem 0 !important;
   box-shadow: none !important;
   border: none !important;
@@ -12,18 +7,11 @@
 
 /* 네비게이션 링크 스타일 */
 .navbar-custom .nav-link {
-  color: #F3F4F6 !important;  /* 밝은 회색 */
+  color: #F3F4F6 !important;
   text-transform: uppercase !important;
   padding: 0.5rem 1.5rem !important;
   font-weight: normal !important;
   letter-spacing: 1px !important;
-}
-
-/* 호버 및 활성 상태 스타일 */
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link:focus,
-.navbar-custom .nav-link.active {
-  color: #FFFFFF !important;
 }
 
 /* 브랜드(로고) 숨기기 */
@@ -43,7 +31,7 @@
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link:focus,
 .navbar-custom .nav-link.active {
-  color: #FFFFFF !important;  /* 흰색 */
+  color: #FFFFFF !important;
 }
 
 /* 모바일 대응 */
