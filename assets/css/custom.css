@@ -1,28 +1,47 @@
-html body {
-  .navbar > .container {
-    padding-left: 0;
-    padding-right: 0;
+/* 네비게이션 바 전체 스타일 */
+.navbar-custom {
+  background-color: #9B8E83 !important;  /* 이미지의 브라운 색상 */
+  padding: 1rem 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 네비게이션 링크 스타일 */
+.navbar-custom .nav-link {
+  color: #F5F5F5 !important;  /* 밝은 회색 */
+  text-transform: uppercase !important;
+  padding: 0.5rem 1.5rem !important;
+  font-weight: normal !important;
+  letter-spacing: 1px !important;
+}
+
+/* 브랜드(로고) 숨기기 */
+.navbar-custom .navbar-brand {
+  display: none !important;
+}
+
+/* 네비게이션 메뉴 중앙 정렬 */
+.navbar-custom .navbar-nav {
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 활성 링크 스타일 */
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus,
+.navbar-custom .nav-link.active {
+  color: #FFFFFF !important;  /* 흰색 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .navbar-custom .navbar-nav {
+    text-align: center !important;
   }
   
-  .navbar-custom {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  .navbar-custom .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  .navbar-custom .navbar-brand {
-    margin-left: 15px !important;
-  }
-  
-  .navbar-nav.ml-auto {
-    margin-right: 0 !important;
-  }
-  
-  .navbar-nav.ml-auto .nav-item:last-child {
-    margin-right: 15px !important;
+  .navbar-custom .nav-link {
+    padding: 0.5rem 1rem !important;
   }
 }
