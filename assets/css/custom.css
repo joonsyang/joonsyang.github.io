@@ -1,15 +1,28 @@
 .navbar-custom {
-  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .navbar-custom .navbar-brand {
-  padding-left: 20px !important;
+  padding-left: 15px !important;
+  margin-right: 30px !important;
 }
 
-.navbar-custom .nav-item:last-child {
+.navbar-custom .navbar-nav {
+  margin-left: auto !important;
+}
+
+.navbar-custom .nav-item:last-child a {
   padding-right: 20px !important;
 }
 
-.navbar-expand-xl .navbar-nav {
-  margin-left: auto !important;  /* 메뉴를 오른쪽으로 밀어냄 */
+/* 모바일 반응형 대응 */
+@media (max-width: 1200px) {
+  .navbar-custom .navbar-brand {
+    padding-left: 15px !important;
+  }
+  
+  .navbar-custom .navbar-toggler {
+    margin-right: 15px !important;
+  }
 }
