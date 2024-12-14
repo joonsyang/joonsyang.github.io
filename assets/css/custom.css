@@ -7,7 +7,15 @@ body div.navbar-custom,
   background-color: #2F3438 !important;
   padding: 0.5rem 0 !important;
   margin-bottom: 0 !important;
-  position: relative !important;
+  position: fixed !important;  /* 네비게이션 바 고정 */
+  width: 100% !important;    /* 전체 너비 사용 */
+  top: 0 !important;         /* 최상단에 위치 */
+  z-index: 1030 !important;  /* 다른 요소들 위에 표시 */
+}
+
+/* 본문 컨텐츠가 네비게이션 바에 가려지지 않도록 상단 여백 추가 */
+body {
+  padding-top: 50px !important;  /* 네비게이션 바 높이만큼 여백 추가 */
 }
 
 /* 타이틀 상단 여백 조정 */
