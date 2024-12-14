@@ -4,6 +4,13 @@ nav.navbar-custom,
 div.navbar-custom,
 .navbar.navbar-custom {
   background-color: #2F3438 !important;  /* 세련된 다크 그레이 */
+  padding: 0.5rem 0 !important;  /* 네비게이션 바 자체의 높이를 줄임 */
+  margin-bottom: 10px !important;  /* 아래 여백을 줄임 */
+}
+
+/* 타이틀 위쪽 여백 조절 */
+.intro-header {
+  margin-top: 10px !important;
 }
 
 /* 네비게이션 링크 스타일 */
