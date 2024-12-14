@@ -1,0 +1,7 @@
+.navbar-custom {
+  padding-right: 2rem !important;
+}
+
+.navbar-custom .navbar-nav {
+  margin-right: 1rem;
+}
