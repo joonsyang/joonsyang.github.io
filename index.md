@@ -1,8 +1,14 @@
 ---
 layout: page
 title: JOONSEOK YANG
-subtitle: Associate Professor <br> Department of Political Science & Diplomacy, <br> Sungkyunkwan University
+subtitle: Associate Professor<br>Department of Political Science & Diplomacy<br>Sungkyunkwan University
 ---
+
+<style>
+.page-heading {
+  font-size: 2em !important;
+}
+</style>
 
 <div style="display: flex; gap: 50px; max-width: 1200px; margin: 0 auto;">
   <div style="flex: 0 0 200px;">
