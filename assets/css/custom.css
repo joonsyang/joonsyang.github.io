@@ -128,3 +128,22 @@ nav.navbar-custom .nav-link {
     padding: 0 1rem;
   }
 }
+
+
+/* CV page iframe styles */
+iframe {
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* CV download link style */
+.cv-page a {
+  color: #666;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.cv-page a:hover {
+  color: #2F3438;
+  text-decoration: underline;
+}
