@@ -62,12 +62,24 @@ site-css:
 title-separator: " | "
 
 title: JOONSEOK YANG
-description: "Associate Professor of Political Science at Sungkyunkwan University"
+description: "Joonseok Yang Associate Professor of Political Science at Sungkyunkwan University"
 author: Joonseok Yang
 url: "https://joonsyang.github.io"
 
+# SEO 관련 설정
+lang: en
+locale: en_US
+social:
+  name: Joonseok Yang
+  links:
+    - https://github.com/joonsyang
 
+# SEO 태그와 사이트맵 활성화
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 구글 애널리틱스가 있다면 추가
+# google_analytics: UA-XXXXXXXXX-X
 
   
