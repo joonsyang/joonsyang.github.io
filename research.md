@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: JOONSEOK YANG | Research
 class: page-research
 ---
 
