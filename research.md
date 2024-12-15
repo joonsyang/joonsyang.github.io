@@ -2,7 +2,6 @@
 layout: page
 name: "JOONSEOK YANG"    # 실제 페이지에 표시될 제목
 title: "Research"        # 브라우저 탭에 표시될 제목
-subtitle: Published and ongoing research projects.
 class: page-research
 ---
 
