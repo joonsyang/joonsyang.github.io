@@ -59,3 +59,4 @@ exclude:
 site-css:
   - "/assets/css/custom.css"
   
+title-separator: " | "
