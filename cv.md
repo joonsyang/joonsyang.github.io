@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CV
+class: page-cv
 ---
 
 <div class="cv-page">
