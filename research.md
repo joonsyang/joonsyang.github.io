@@ -14,7 +14,7 @@ class: page-research
     [[Link]](#)
 
 - "Why Compete for Firms?: Electoral Effects of Corporate Headquarters Relocation." _American Journal of Political Science_, 68(2): 339-353, 2024.
-    [[Link]](#)
+    [[Link]](https://doi.org/10.1111/ajps.12807)
 
 - "Information campaigns and public perceptions of structural reforms: Evidence from a survey experiment on gasoline subsidy reform in Nigeria." _Journal of Policy Analysis and Management_, 43(2): 509-529, 2024. [With Tom Moerenhout]
     [[Link]](#)
