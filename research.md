@@ -1,6 +1,8 @@
+
 ---
 layout: page
 title: Research
+class: page-research
 ---
 
 ## Peer-Reviewed Articles
