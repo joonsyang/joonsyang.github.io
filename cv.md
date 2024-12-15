@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CV
+title: JOONSEOK YANG | CV
 class: page-cv
 ---
 
