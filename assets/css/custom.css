@@ -13,30 +13,36 @@ body div.navbar-custom,
  right: 0 !important;
  z-index: 1030 !important;
 }
+
 /* 본문 상단 여백 조정 */
 body {
  padding-top: 30px !important;
 }
+
 /* Research와 CV 페이지 특별 스타일 */
 .page-research,
 .page-cv {
  padding-top: 45px !important;
 }
+
 .page-research .content-section,
 .page-cv .cv-page {
  margin-top: 0 !important;
  padding-top: 10px !important;
 }
+
 /* 네비게이션 링크 스타일 */
 html body .navbar-custom .nav-link,
 .navbar-custom .nav-link,
 nav.navbar-custom .nav-link {
  color: rgba(255, 255, 255, 0.8) !important;
 }
+
 /* 브랜드(로고) 숨기기 */
 .navbar-custom .navbar-brand {
  display: none !important;
 }
+
 /* 네비게이션 메뉴 중앙 정렬 */
 .navbar-custom .navbar-nav {
  margin: 0 auto !important;
@@ -44,12 +50,14 @@ nav.navbar-custom .nav-link {
  align-items: center !important;
  justify-content: center !important;
 }
+
 /* 활성 링크 스타일 */
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link:focus,
 .navbar-custom .nav-link.active {
  color: #FFFFFF !important;
 }
+
 /* 모바일 대응 */
 @media (max-width: 768px) {
  .navbar-custom .navbar-nav {
@@ -61,7 +69,7 @@ nav.navbar-custom .nav-link {
  }
 
  body {
-   padding-top: 60px !important; /* 네비게이션 바 높이 고려 */
+   padding-top: 60px !important;
  }
 }
 
@@ -71,6 +79,7 @@ nav.navbar-custom .nav-link {
    font-size: 24px !important;
    text-align: center !important;
    margin: 20px 0 !important;
+   width: 100% !important;
  }
  
  div.text-section {
@@ -79,30 +88,38 @@ nav.navbar-custom .nav-link {
    width: 100% !important;
    max-width: 100% !important;
    margin: 0 auto !important;
+   display: block !important;
+   float: none !important;
  }
  
  div.profile-container {
-   flex-direction: column !important;
-   gap: 20px !important;
-   align-items: center !important;
-   padding: 0 20px !important;
+   display: block !important;
    width: 100% !important;
-   display: flex !important;
+   padding: 20px !important;
+   text-align: center !important;
  }
  
  div.profile-container img {
-   width: 100px !important; /* 이미지 크기 더 축소 */
-   height: auto !important;
+   width: 100px !important;
+   height: 100px !important;
+   object-fit: cover !important;
    display: block !important;
-   margin: 0 auto !important;
-   max-width: 100% !important;
+   margin: 0 auto 20px auto !important;
  }
 
- /* 기본 텍스트 컨테이너 */
  .container {
    width: 100% !important;
    padding: 0 20px !important;
    margin: 0 auto !important;
+ }
+
+ /* 프로필 컨테이너 내부 모든 요소 */
+ .profile-container > * {
+   width: 100% !important;
+   float: none !important;
+   clear: both !important;
+   display: block !important;
+   text-align: center !important;
  }
 }
 
@@ -111,16 +128,19 @@ nav.navbar-custom .nav-link {
  max-width: 900px;
  margin: 0 auto;
 }
+
 /* Publication list styles */
 .content-section ul {
  list-style: none;
  padding-left: 0;
 }
+
 .content-section li {
  margin-bottom: 1.5rem;
  text-align: left;
  line-height: 1.6;
 }
+
 /* Link indent and style */
 .content-section li a {
  margin-left: 1em;
@@ -129,20 +149,24 @@ nav.navbar-custom .nav-link {
  text-decoration: none;
  transition: color 0.2s ease;
 }
+
 .content-section li a:hover {
  color: #2F3438;
  text-decoration: underline;
 }
+
 /* Journal name style */
 .content-section em {
  font-style: italic;
  color: #666;
 }
+
 /* Co-authors style */
 .content-section li [class^="with"] {
  color: #666;
  font-size: 0.95em;
 }
+
 /* Heading styles */
 .content-section h2 {
  margin-top: 2rem;
@@ -170,7 +194,6 @@ nav.navbar-custom .nav-link {
    margin-top: 0.5em !important;
  }
 
- /* 이메일과 전화번호 스타일 */
  a[href^="mailto"],
  a[href^="tel"] {
    display: block !important;
@@ -184,12 +207,14 @@ iframe {
  margin-top: 20px;
  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 /* CV download link style */
 .cv-page a {
  color: #666;
  text-decoration: none;
  font-size: 1.1em;
 }
+
 .cv-page a:hover {
  color: #2F3438;
  text-decoration: underline;
