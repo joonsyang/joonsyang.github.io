@@ -1,7 +1,7 @@
 ---
 layout: page
 description: "Joonseok Yang"
-keywords: "Joonseok Yang, Politics, Political Science"
+keywords: "Joonseok Yang, sungkyunkwan university, Politics, Political Science"
 ---
 
 <div style="text-align: center; margin-bottom: 30px; margin-top: 10px;">
