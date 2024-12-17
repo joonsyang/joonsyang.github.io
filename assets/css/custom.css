@@ -69,6 +69,23 @@ nav.navbar-custom .nav-link {
   }
 }
 
+/* 모바일 스타일 */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* 타이틀 크기 조정 */
+  }
+  div.text-section {
+    font-size: 16px; /* 텍스트 크기 조정 */
+  }
+  div.profile-container {
+    flex-direction: column; /* 세로 배열로 변경 */
+    gap: 20px; /* 간격 조정 */
+  }
+  div.profile-container img {
+    width: 150px; /* 이미지 크기 축소 */
+  }
+}
+
 /* Research page styles */
 .content-section {
   max-width: 900px;
