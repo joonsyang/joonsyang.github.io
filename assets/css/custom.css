@@ -91,7 +91,7 @@ nav.navbar-custom .nav-link {
  }
  
  div.profile-container img {
-   width: 160px !important; /* 이미지 크기 더 축소 */
+   width: 100px !important; /* 이미지 크기 더 축소 */
    height: auto !important;
    display: block !important;
    margin: 0 auto !important;
