@@ -62,7 +62,9 @@ site-css:
 title-separator: " | "
 
 title: JOONSEOK YANG
-description: "Joonseok Yang Associate Professor of Political Science at Sungkyunkwan University"
+
+description: "Joonseok Yang, Associate Professor of Political Science at Sungkyunkwan University, specializing in [주요 연구 분야, 예: political methodology, comparative politics]. Explore my research, publications, and CV."
+
 author: Joonseok Yang
 url: "https://joonsyang.github.io"
 
