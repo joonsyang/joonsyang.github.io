@@ -34,7 +34,7 @@ class: page-research
 - "Who Votes for Free Trade and When? Geopolitics as the Sources of Legislative Preferences on Free Trade Agreements." _Review of International Political Economy_, 30(6), 2257-2284, 2023. [With Sung Eun Kim]
     [[Link]](https://doi.org/10.1080/09692290.2022.2144927)
 
-- "South Korean Newspaper Coverage of Yemeni Refugees: Analysis of Topics and Sentiments using Machine Learning Techniques." _Asian Journal of Communication_, 34(1): 57-72, 2023. [with Jae Young Huh]
+- "South Korean Newspaper Coverage of Yemeni Refugees: Analysis of Topics and Sentiments using Machine Learning Techniques." _Asian Journal of Communication_, 34(1): 57-72, 2023. [with Jaeyoung Hur]
     [[Link]](https://doi.org/10.1080/01292986.2023.2257230)
 
 - "Environmental Perception and Public Attitudes toward Nuclear Energy in South Korea." _East and West Studies_, 35-1: 201-239, 2023. (In Korean) [with Kyuhee Park]
