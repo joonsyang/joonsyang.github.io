@@ -7,6 +7,9 @@ class: page-research
 
 ## Peer-Reviewed Articles
 
+- "Anti-Asian Hate Crimes and American Reputation." _British Journal of Political Science_, 2025. [With Sung Eun Kim, Jong Hee Park, and Inbok Rhee]
+  [[Link]](https://doi:10.1017/S0007123424001030)
+
 - "Why Compete for Firms?: Electoral Effects of Corporate Headquarters Relocation." _American Journal of Political Science_, 68(2): 339-353, 2024.
     [[Link]](https://doi.org/10.1111/ajps.12807)
   
