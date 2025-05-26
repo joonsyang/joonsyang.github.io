@@ -8,7 +8,7 @@ class: page-research
 ## Peer-Reviewed Articles
 
 - "Anti-Asian Hate Crimes and American Reputation." _British Journal of Political Science_, 2025. [With Sung Eun Kim, Jong Hee Park, and Inbok Rhee]
-  [[Link]](https://doi:10.1017/S0007123424001030)
+  [[Link]](https://doi.org/10.1017/S0007123424001030)
 
 - "The Post-Oil Post-Covid Social Contract: Taxing Informal Workers for Healthcare Insurance in Oil Ex-
 porting Developing Economies." _Journal of Public Policy_, 2025. [With Tom Moerenhout and Nicolas Orgeira
