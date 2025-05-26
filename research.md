@@ -10,8 +10,7 @@ class: page-research
 - "Anti-Asian Hate Crimes and American Reputation." _British Journal of Political Science_, 2025. [With Sung Eun Kim, Jong Hee Park, and Inbok Rhee]
   [[Link]](https://doi.org/10.1017/S0007123424001030)
 
-- "The Post-Oil Post-Covid Social Contract: Taxing Informal Workers for Healthcare Insurance in Oil Ex-
-porting Developing Economies." _Journal of Public Policy_, 2025. [With Tom Moerenhout and Nicolas Orgeira Pillai]
+- "The Post-Oil Post-Covid Social Contract: Taxing Informal Workers for Healthcare Insurance in Oil Exporting Developing Economies." _Journal of Public Policy_, 2025. [With Tom Moerenhout and Nicolas Orgeira Pillai]
   [[Link]](https://doi.org/10.1017/S0143814X2500008X)
   
 - "Citizen Responses to Donor-Centeredness in the US-China Public Diplomacy Competition." _International Interactions_, 2025. [With Sung Eun Kim, Jong Hee Park, and Inbok Rhee]
