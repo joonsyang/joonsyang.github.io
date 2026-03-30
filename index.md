@@ -16,8 +16,8 @@ keywords: "Joonseok Yang, Yonsei university, Politics, Political Science"
 <div style="display: flex; gap: 50px; max-width: 1500px; margin: 0 auto; padding: 0 20px;" class="profile-main">
   <div style="flex: 0 0 200px;" class="profile-image-container">
     <img src="assets/img/profile.jpg" alt="Joonseok Yang" style="width: 100%; margin-bottom: 20px;" class="profile-image"/>
-    <p style="margin: 0;">✉️ jsyang01@skku.edu</p>
-    <p style="margin: 0;">📞 82-02-760-0381</p>
+    <p style="margin: 0;">✉️ joonseok.yang@yonsei.ac.kr</p>
+    <p style="margin: 0;">📞 82-02-2123-2954</p>
   </div>
 
   <div style="flex: 1; font-size: 0.9em; margin: 0; padding: 0;">
