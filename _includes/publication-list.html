@@ -1,0 +1,68 @@
+{% comment %}
+  publication-list.html — renders publications from _data/publications.yml.
+  Params:
+    include.pillar   — filter by pillar key (business / opinion / env-energy / other)
+    include.subgroup — filter by env-energy subgroup key
+    include.selected — true to show only selected publications
+    include.mode     — "cards" for card layout (Selected Work); default is a list
+  Ordering: forthcoming → under-review (Revise and Resubmit) → published, then year desc.
+{% endcomment %}
+{%- assign pubs = site.data.publications -%}
+{%- if include.selected -%}
+  {%- assign pubs = pubs | where: "selected", true -%}
+{%- endif -%}
+{%- if include.pillar -%}
+  {%- assign pubs = pubs | where: "pillar", include.pillar -%}
+{%- endif -%}
+{%- if include.subgroup -%}
+  {%- assign pubs = pubs | where: "subgroup", include.subgroup -%}
+{%- endif -%}
+{%- assign pubs_f = pubs | where: "status", "forthcoming" | sort: "year", "last" | reverse -%}
+{%- assign pubs_r = pubs | where: "status", "under-review" | sort: "year", "last" | reverse -%}
+{%- assign pubs_p = pubs | where: "status", "published" | sort: "year", "last" | reverse -%}
+{%- assign ordered = pubs_f | concat: pubs_r | concat: pubs_p -%}
+
+{%- if include.mode == "cards" -%}
+<div class="pub-cards">
+  {%- for pub in ordered -%}
+  <div class="pub-card">
+    <div class="pub-card-title">&ldquo;{{ pub.title }}&rdquo;</div>
+    <div class="pub-card-venue"><em>{{ pub.journal }}</em>{% if pub.year %}, {{ pub.year }}{% endif %}</div>
+    <div class="pub-card-authors">
+      {%- for a in pub.authors -%}
+        {%- if a == "Joonseok Yang" -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </div>
+    {%- if pub.doi %}<a class="pub-link" href="https://doi.org/{{ pub.doi }}">[Link]</a>
+    {%- elsif pub.url %}<a class="pub-link" href="{{ pub.url }}">[Link]</a>{% endif %}
+  </div>
+  {%- endfor -%}
+</div>
+{%- else -%}
+<ul class="pub-list">
+  {%- for pub in ordered -%}
+  <li class="pub-item">
+    <span class="pub-authors">
+      {%- for a in pub.authors -%}
+        {%- if a == "Joonseok Yang" -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}.
+    </span>
+    <span class="pub-title">&ldquo;{% if pub.language == "ko" and pub.title_original %}{{ pub.title_original }}{% else %}{{ pub.title }}{% endif %}.&rdquo;</span>
+    {%- if pub.language == "ko" and pub.title_original == nil %} <span class="pub-lang">(In Korean)</span>{% endif %}
+    <span class="pub-venue">
+      {%- if pub.status == "forthcoming" -%}
+        <em>{{ pub.journal }}</em> (forthcoming)
+      {%- elsif pub.status == "under-review" -%}
+        Revise and Resubmit, <em>{{ pub.journal }}</em>
+      {%- else -%}
+        <em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}{% if pub.pages %}: {{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}
+      {%- endif -%}.
+    </span>
+    {%- if pub.doi %} <a class="pub-link" href="https://doi.org/{{ pub.doi }}">[Link]</a>
+    {%- elsif pub.url %} <a class="pub-link" href="{{ pub.url }}">[Link]</a>{% endif %}
+  </li>
+  {%- endfor -%}
+</ul>
+{%- endif -%}
