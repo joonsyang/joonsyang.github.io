@@ -55,6 +55,17 @@ exclude:
   - README.md
   - _posts/
   - docs/
+  # 내부 작업 파일 — 사이트로 복사·공개되면 안 됨
+  - cv/
+  - pic/
+  - scripts/
+  - AUDIT.md
+  - CLAUDE.md
+  # 테마 개발용 잔재
+  - Appraisals
+  - beautiful-jekyll-theme.gemspec
+  - staticman.yml
+  - screenshot.png
 
 site-css:
   - "/assets/css/custom.css"

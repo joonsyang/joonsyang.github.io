@@ -87,6 +87,12 @@ button:focus-visible {
   outline-color: var(--c-bg); /* 어두운 navbar 위에서는 흰 포커스 링 */
 }
 
+/* 상단 여백 중복 정리: body padding-top(고정 navbar 보정)과
+   테마 .intro-header의 5rem 상단 마진이 중첩되던 것을 축소 */
+.intro-header {
+  margin-top: var(--sp-4);
+}
+
 /* 본문 폭 제한 (구 .content-section 900px 규칙의 부활) */
 .page-inner {
   width: 100%; /* 부모 .row(flex) 안에서 전폭 확보 */
@@ -291,13 +297,19 @@ html body .navbar-custom .nav-link,
 }
 
 /* ---------- CV 페이지 ---------- */
-.cv-page a {
-  font-size: var(--fs-h4);
+.cv-download {
+  display: inline-block;
+  border: 1px solid var(--c-accent);
+  padding: var(--sp-2) var(--sp-3);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: var(--sp-3);
 }
-
-iframe {
-  margin-top: var(--sp-3);
-  border: 1px solid var(--c-border);
+.cv-download:hover,
+.cv-download:focus {
+  background-color: var(--c-accent);
+  color: var(--c-bg);
+  text-decoration: none;
 }
 
 /* ---------- Footer / 소셜 (beautifuljekyll.css 직접 수정분에서 이전) ---------- */
