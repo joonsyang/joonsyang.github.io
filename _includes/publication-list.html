@@ -5,9 +5,10 @@
     include.subgroup — filter by env-energy subgroup key
     include.selected — true to show only selected publications
     include.mode     — "cards" for card layout (Selected Work); default is a list
-  Ordering: forthcoming → under-review (Revise and Resubmit) → in-review (Under Review) → published, then year desc.
-  NOTE: status가 working-paper인 항목은 의도적으로 사이트에 렌더링하지 않는다
-  (아래 status 필터에 포함시키지 않음 — CV 생성용으로만 publications.yml에 존재).
+    include.working  — true for the Working Papers section: renders in-review
+                       ("Under Review" 라벨) + working-paper 항목만. 기둥 렌더링에는
+                       이 두 status가 포함되지 않는다 (CV의 섹션 구조와 동일하게 유지).
+  Ordering (기둥): forthcoming → under-review (Revise and Resubmit) → published, then year desc.
 {% endcomment %}
 {%- assign pubs = site.data.publications -%}
 {%- if include.selected -%}
@@ -19,11 +20,16 @@
 {%- if include.subgroup -%}
   {%- assign pubs = pubs | where: "subgroup", include.subgroup -%}
 {%- endif -%}
-{%- assign pubs_f = pubs | where: "status", "forthcoming" | sort: "year", "last" | reverse -%}
-{%- assign pubs_r = pubs | where: "status", "under-review" | sort: "year", "last" | reverse -%}
-{%- assign pubs_i = pubs | where: "status", "in-review" | sort: "year", "last" | reverse -%}
-{%- assign pubs_p = pubs | where: "status", "published" | sort: "year", "last" | reverse -%}
-{%- assign ordered = pubs_f | concat: pubs_r | concat: pubs_i | concat: pubs_p -%}
+{%- if include.working -%}
+  {%- assign pubs_i = pubs | where: "status", "in-review" -%}
+  {%- assign pubs_w = pubs | where: "status", "working-paper" -%}
+  {%- assign ordered = pubs_i | concat: pubs_w -%}
+{%- else -%}
+  {%- assign pubs_f = pubs | where: "status", "forthcoming" | sort: "year", "last" | reverse -%}
+  {%- assign pubs_r = pubs | where: "status", "under-review" | sort: "year", "last" | reverse -%}
+  {%- assign pubs_p = pubs | where: "status", "published" | sort: "year", "last" | reverse -%}
+  {%- assign ordered = pubs_f | concat: pubs_r | concat: pubs_p -%}
+{%- endif -%}
 
 {%- if include.mode == "cards" -%}
 <div class="pub-cards">
@@ -54,17 +60,19 @@
     </span>
     <span class="pub-title">{% if pub.language == "ko" and pub.title_original %}<span lang="ko">&ldquo;{{ pub.title_original }}.&rdquo;</span>{% else %}&ldquo;{{ pub.title }}.&rdquo;{% endif %}</span>
     {%- if pub.language == "ko" and pub.title_original == nil %} <span class="pub-lang">(In Korean)</span>{% endif %}
+    {%- unless pub.status == "working-paper" -%}
     <span class="pub-venue">
       {%- if pub.status == "forthcoming" -%}
         <em>{{ pub.journal }}</em> <span class="pub-flag">Forthcoming</span>
       {%- elsif pub.status == "under-review" -%}
         <span class="pub-flag">Revise and Resubmit</span>, <em>{{ pub.journal }}</em>
       {%- elsif pub.status == "in-review" -%}
-        <span class="pub-flag">Under Review</span>
+        <span class="pub-flag">Under Review</span>{% if pub.journal %}, <em>{{ pub.journal }}</em>{% endif %}
       {%- else -%}
-        <em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}{% if pub.pages %}: {{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}
+        <em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}{% if pub.pages %}{% if pub.volume %}: {% else %} {% endif %}{{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}
       {%- endif -%}.
     </span>
+    {%- endunless -%}
     {%- if pub.doi %} <a class="pub-link" href="https://doi.org/{{ pub.doi }}">[Link]</a>
     {%- elsif pub.url %} <a class="pub-link" href="{{ pub.url }}">[Link]</a>{% endif %}
   </li>

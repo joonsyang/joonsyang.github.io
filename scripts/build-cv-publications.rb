@@ -79,14 +79,16 @@ def plain_entry(pub)
   "\\hangindent=2em\n#{quoted_title(pub)}#{coauthors(pub)} \\\\\n"
 end
 
-# pillar 레이아웃용: 항목 단위 status 라벨
+# pillar 레이아웃용: R&R은 연도 열에 마커를 두어 정렬을 통일하고
+# (Forthcoming 항목과 같은 패턴), 본문에는 저널명만 둔다.
 def rr_entry(pub)
-  "\\hangindent=2em\n#{quoted_title(pub)} Revise and Resubmit, #{journal_tex(pub)}#{coauthors(pub)} \\\\\n"
+  "\\hangindent=2em\n\\years{R\\&R} #{quoted_title(pub)} #{journal_tex(pub)}#{coauthors(pub)}\\\\\n"
 end
 
+# in-review는 Working Papers 섹션에 "(Under Review)" 라벨로 표기
 def inreview_entry(pub)
-  label = pub["journal"] ? "Under Review, #{journal_tex(pub)}" : "Under Review"
-  "\\hangindent=2em\n#{quoted_title(pub)} #{label}#{coauthors(pub)} \\\\\n"
+  label = pub["journal"] ? " (Under Review, #{journal_tex(pub)})" : " (Under Review)"
+  "\\hangindent=2em\n#{quoted_title(pub)}#{label}#{coauthors(pub)} \\\\\n"
 end
 
 def pillar_item(pub)
@@ -94,7 +96,6 @@ def pillar_item(pub)
   when "published"    then published_entry(pub)
   when "forthcoming"  then forthcoming_entry(pub)
   when "under-review" then rr_entry(pub)
-  when "in-review"    then inreview_entry(pub)
   end
 end
 
@@ -138,9 +139,8 @@ if layout == "year"
 
   out << "\\subsection*{Under Review}\n\n"
   (by["under-review"] || []).each { |p| out << under_review_entry(p) << "\n" }
-  (by["in-review"] || []).each { |p| out << plain_entry(p) << "\n" }
 else
-  non_wp = pubs.reject { |p| p["status"] == "working-paper" }
+  non_wp = pubs.reject { |p| %w[working-paper in-review].include?(p["status"]) }
   PILLARS.each do |key, title|
     items = non_wp.select { |p| p["pillar"] == key }
     next if items.empty?
@@ -160,8 +160,13 @@ else
   end
 end
 
-# Working Papers는 두 레이아웃 모두 맨 끝에 별도 유지
-out << "\\subsection*{Working Papers}\n\n"
+# Working Papers는 두 레이아웃 모두 맨 끝에 별도 유지.
+# in-review(투고 중, 저널 비공개)는 기둥이 아닌 이 섹션에 "(Under Review)" 라벨로 들어가며,
+# 존재할 때만 섹션명을 "Working Papers and Work in Progress"로 확장한다.
+in_review = by["in-review"] || []
+wp_title = in_review.empty? ? "Working Papers" : "Working Papers and Work in Progress"
+out << "\\subsection*{#{wp_title}}\n\n"
+in_review.each { |p| out << inreview_entry(p) << "\n" }
 (by["working-paper"] || []).each { |p| out << plain_entry(p) << "\n" }
 
 path = File.join(ROOT, "cv", "publications-generated.tex")
