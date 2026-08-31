@@ -649,3 +649,143 @@
   status: under-review
   pillar: opinion
   selected: false
+
+# ===== In Review (대상 저널 비공개 — CV .tex Under Review에서 이관) =====
+
+# pillar: opinion (확정)  # 저자 순서 미확인 (tex 나열 기준)
+- title: "Public Perceptions of Civil Participation in the Policymaking Process: Evidence from Survey Experiment in South Korea"
+  authors: [Joonseok Yang, Wonbin Cho, Nam Kyu Kim, Yoonmin Nam]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: in-review
+  pillar: opinion
+  selected: false
+
+# pillar: opinion (확정)  # 저자 순서 미확인 (tex 나열 기준)
+- title: "Effect of International Organizations' Direct Engagement with the Public: Information Source Effect, IO Legitimacy, and Public Opinion"
+  authors: [Joonseok Yang, Byungwon Woo, Nam Kyu Kim]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: in-review
+  pillar: opinion
+  selected: false
+
+# ===== Working Papers (CV .tex에서 이관 — 사이트 미노출) =====
+
+# pillar: business (확정)
+- title: "Partisan Responses to the Mobility of Firms: Political Incentives to Retain Firms and Tax Treatment"
+  authors: [Joonseok Yang]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: working-paper
+  pillar: business
+  selected: false
+
+# pillar: other (확정)  # 저자 순서 미확인 (tex 나열 기준)
+- title: "Political Polarization and Undemocratic Behavior Bias: Evidence from Survey Experiment in South Korea"
+  authors: [Joonseok Yang, Wonbin Cho, Nam Kyu Kim, Yoonmin Nam]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: working-paper
+  pillar: other
+  selected: false
+
+# pillar: other (확정)  # 저자 순서 미확인 (tex 나열 기준)
+- title: "Public Support for Judicial Reform: Partisan Bias and Source Effects"
+  authors: [Joonseok Yang, Wonbin Cho, Nam Kyu Kim, Yoonmin Nam]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: working-paper
+  pillar: other
+  selected: false
+
+# pillar: opinion (확정)  # 저자 순서 미확인 (tex 나열 기준)
+- title: "To Stay or to Go? Sources of Domestic Support for Foreign Direct Investment in Kenya"
+  authors: [Joonseok Yang, Inbok Rhee]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: working-paper
+  pillar: opinion
+  selected: false
+
+# pillar: opinion (확정)
+- title: "Public Opinion Toward the Relocation of Multinational Corporations: Evidence from Survey Experiment in South Korea"
+  authors: [Joonseok Yang]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: working-paper
+  pillar: opinion
+  selected: false
+
+# pillar: other (확정)  # 저자 순서 미확인 (tex 나열 기준)
+- title: "Trust in Blockchain Voting"
+  authors: [Joonseok Yang, Yesola Kwon]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: working-paper
+  pillar: other
+  selected: false
+
+# pillar: env-energy / climate-accountability (확정)  # 저자 순서 미확인 (tex 나열 기준)
+- title: "Electoral Effects of Natural Disaster: Evidence from South Korea"
+  authors: [Joonseok Yang, Kyuhee Park]
+  journal:
+  volume:
+  issue:
+  pages:
+  year:
+  doi:
+  url:
+  language: en
+  status: working-paper
+  pillar: env-energy
+  subgroup: climate-accountability
+  selected: false

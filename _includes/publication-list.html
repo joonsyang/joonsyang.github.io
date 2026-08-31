@@ -5,7 +5,9 @@
     include.subgroup — filter by env-energy subgroup key
     include.selected — true to show only selected publications
     include.mode     — "cards" for card layout (Selected Work); default is a list
-  Ordering: forthcoming → under-review (Revise and Resubmit) → published, then year desc.
+  Ordering: forthcoming → under-review (Revise and Resubmit) → in-review (Under Review) → published, then year desc.
+  NOTE: status가 working-paper인 항목은 의도적으로 사이트에 렌더링하지 않는다
+  (아래 status 필터에 포함시키지 않음 — CV 생성용으로만 publications.yml에 존재).
 {% endcomment %}
 {%- assign pubs = site.data.publications -%}
 {%- if include.selected -%}
@@ -19,8 +21,9 @@
 {%- endif -%}
 {%- assign pubs_f = pubs | where: "status", "forthcoming" | sort: "year", "last" | reverse -%}
 {%- assign pubs_r = pubs | where: "status", "under-review" | sort: "year", "last" | reverse -%}
+{%- assign pubs_i = pubs | where: "status", "in-review" | sort: "year", "last" | reverse -%}
 {%- assign pubs_p = pubs | where: "status", "published" | sort: "year", "last" | reverse -%}
-{%- assign ordered = pubs_f | concat: pubs_r | concat: pubs_p -%}
+{%- assign ordered = pubs_f | concat: pubs_r | concat: pubs_i | concat: pubs_p -%}
 
 {%- if include.mode == "cards" -%}
 <div class="pub-cards">
@@ -56,6 +59,8 @@
         <em>{{ pub.journal }}</em> <span class="pub-flag">Forthcoming</span>
       {%- elsif pub.status == "under-review" -%}
         <span class="pub-flag">Revise and Resubmit</span>, <em>{{ pub.journal }}</em>
+      {%- elsif pub.status == "in-review" -%}
+        <span class="pub-flag">Under Review</span>
       {%- else -%}
         <em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}{% if pub.pages %}: {{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}
       {%- endif -%}.
