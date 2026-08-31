@@ -1,0 +1,386 @@
+\documentclass[11pt, letterpaper]{article}
+%\usepackage{fontspec}
+\usepackage{multicol}
+%\usepackage{eurosym}
+\usepackage{marvosym} % For cool symbols.
+
+% DOCUMENT LAYOUT
+\usepackage{geometry}
+\geometry{letterpaper, textwidth=7in, textheight=8.5in, marginparsep=0pt, marginparwidth=.3in}
+\setlength\parindent{0in}
+
+\usepackage{datetime}
+\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{40.2pt}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+\fancyhf{}
+%\lhead{ \fancyplain{}{{\scriptsize Curriculum vitae}} }
+%\rhead{ \fancyplain{}{{\scriptsize Joonseok Yang}} }
+\rfoot{ \fancyplain{}{\thepage} }
+%\lfoot{ \fancyplain{}{{\scriptsize Last Updated : \mydate May 2019}}}
+%mydate\today
+
+\usepackage{hyperref}
+
+% FONTS
+%\renewcommand{\familydefault}{\rmdefault}
+%\renewcommand{\rmdefault}{LinuxBiolinumT-OsF}
+\renewcommand{\rmdefault}{LinuxLibertineT-OsF}
+%\renewcommand{\rmdefault}{LinuxLibertineT-OsF}
+%\usepackage[charter]{mathdesign}
+\usepackage[bitstream-charter]{mathdesign}
+
+\newenvironment{hangingpar}[1]
+  {\setlength{\leftskip}{#1}%%
+   \setlength{\parindent}{#1}%%
+  }
+  {\par}
+
+%\renewcommand{\sfdefault}{qtm}
+%\renewcommand{\ttdefault}{qtm}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O} % Main text font
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Times New Roman} % Main text font
+%\setromanfont [Ligatures={Common}, BoldFont={Fontin Bold}, ItalicFont={Fontin Italic}]{Fontin}
+%\setsansfont [Ligatures={Common}, BoldFont={Fontin Sans Bold}, ItalicFont={Fontin Sans Italic}]{Fontin Sans}
+%\setmonofont[Scale=0.8]{Monaco}
+
+% ---- CUSTOM AMPERSAND
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Fontin}\selectfont\itshape\&}}
+% ---- MARGIN YEARS
+%\usepackage{marginnote}
+%\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+%\renewcommand*{\raggedleftmarginnote}{}
+%\setlength{\marginparsep}{8pt}
+%\reversemarginpar
+
+
+\newcommand{\years}[1]{\hangindent=1.3cm #1 \hskip 1em}
+
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\rmfamily\mdseries\upshape\large}
+\subsectionfont{\rmfamily\bfseries\upshape\normalsize}
+\subsubsectionfont{\rmfamily\mdseries\upshape\normalsize}
+%\sectionfont{\mdseries\upshape\Large} % Set font options for sections
+%\subsectionfont{\mdseries\scshape\normalsize} % Set font options for subsections
+%\subsubsectionfont{\mdseries\upshape\large} % Set font options for subsubsections
+
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\mdseries}{\thesection}{1em}{}[{\titlerule[0.4pt]}]
+\usepackage{hyperref}
+\usepackage{color}
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+%\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Byungkyu Lee - vita},pdfauthor={BK}]{hyperref}
+
+%\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
+% 논문 목록의 \href(저널명 DOI 링크)가 화면에서 테두리 박스 없이 자연스럽게 보이도록
+\hypersetup{hidelinks}
+
+
+
+% DOCUMENT
+\begin{document}
+
+\setlength{\parskip}{0.3em}
+
+\begin{center}
+{\LARGE \textbf{\textsc{JOONSEOK YANG}}}
+
+%Ph.D Candidate 
+
+%\emph{Curriculum Vitae}
+%September 2024
+\end{center}
+
+\setlength{\parskip}{0em}
+\begin{tabular}{lr}
+\begin{minipage}[t]{4in}
+Department of Political Science \& International Studies \\
+Yonsei University \\
+Seoul, South Korea
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+%\begin{flushright}% or better \raggedleft see comments below
+Email:  joonseok.yang@yonsei.ac.kr \\
+Website: \href{https://joonsyang.github.io/}{\textcolor{blue}{https://joonsyang.github.io/}}\\
+Phone: 82-10-8608-4788
+%\end{flushright}
+\end{minipage}
+\end{tabular}
+
+%Email: \href{mailto:bl2474@columbia.edu}{bl2474@columbia.edu}\\
+%Email: \href{mailto:byungkyu.lee@columbia.edu}{\textsc{byungkyu.lee@columbia.edu}}
+
+%Email: \href{mailto:bl2474@columbia.edu}{\textsc{bl2474@columbia.edu}}
+
+%Typeset in {\fontspec{Times New Roman}\XeTeX }\\
+
+%\hrule
+
+\section*{\textbf{\textsc{Academic Appointment}}}
+2025.03-present  \hskip 1em Assistant Professor, Department of Political Science \& International Studies,  Yonsei University \\
+2024.09-2025.02  \hskip 1em Associate Professor, Department of Political Science \& Diplomacy,  Sungkyunkwan University \\
+2020.03-2024.08  \hskip 1em Assistant Professor, Department of Political Science \& Diplomacy,  Sungkyunkwan University \\
+2019.09-2020.07 \hskip 1em Postdoctoral Fellow, University of California, Irvine
+
+\section*{\textbf{\textsc{Education}}}
+
+2019  \hskip 2.4em Ph.D. in Political Science, Columbia University 
+
+%\hangindent=5.2em
+%\hskip 5.2em  Committee: Peter Bearman (chair), David Stark, Dalton Conley (Princeton), Delia Baldassarri (NYU)
+
+2016   \hskip 2.4em M.Phil. in Political Science, Columbia University
+
+2014   \hskip 2.4em M.A. in Political Science, Columbia University
+
+2012   \hskip 2.4em M.I.A. School of International \& Public Affairs (SIPA), Columbia University
+
+2008   \hskip 2.4em B.A. in Political Science, Yonsei University
+
+\hskip 4.9em B.A. in French Language and Literature, Yonsei University
+
+%\section*{\textbf{\textsc{Fields of interest}}}
+%Comparative/International Political Economy, Public Policy, Public Opinion, Energy and Environmental Politics, and Business-Government Relations
+
+%Political Economy of Policy-making
+
+\section*{\textbf{\textsc{Research}}}
+
+%\subsection*{Book Manuscript in Progress}
+
+%\hangindent=2em 
+%``Corporate Moves and Political Choices: Business Location Decisions, Public Perceptions, and Electoral Outcomes"
+
+
+% ---- 논문 목록은 자동 생성됨: _data/publications.yml -> scripts/build-cv-publications.rb ----
+% 손으로 수정하지 말 것. 전환 전 원본은 cv/_archive/publications-original.tex 에 보존.
+\input{publications-generated}
+
+\subsection*{Book (in Korean)}
+
+\hangindent=2em 
+\years{2021} \textit{Informing Korea's Soft Power Strategy: Evidence from Survey Experiments on Public Perceptions of Public Diplomacy and Foreign Aid}, (in Korean) National Research Council for Economics, Humanities, and Social Sciences, Sejong, South Korea [With Sung Eun Kim, Jong Hee Park, Inbok Rhee, and others]
+
+\subsection*{Policy Publications}
+\hangindent=2em
+\years{2015} ``Low Oil Prices: An Opportunity for Fuel Subsidy Reform.'' Report for Center on Global Energy Policy at Columbia University. [With Keith Benes, Andrew Cheon, and Johannes Urpelainen] 
+
+
+\iffalse
+\section*{\textsc{Selected Presentations}}
+\hangindent=2em 
+
+
+2021 \hskip 3em American Political Science Association, Annual Meeting, Seattle
+
+2021 \hskip 3em Midwest Political Science Association, Annual Meeting, Chicago 
+
+2020 \hskip 3em Southern Political Science Association, Annual Meeting, San Juan, Puerto Rico 
+
+2019 \hskip 3em American Political Science Association, Annual Meeting, Washington D.C. 
+
+2019 \hskip 3em International Studies Association, Annual Meeting, Toronto
+
+2018 \hskip 3em Columbia University International Politics Seminar
+
+2018 \hskip 3em American Political Science Association, Annual Meeting, Boston 
+
+2018 \hskip 3em Midwest Political Science Association, Annual Meeting, Chicago 
+
+2017 \hskip 3em American Political Science Association, Annual Meeting, San Francisco 
+
+2017 \hskip 3em Midwest Political Science Association, Annual Meeting, Chicago 
+
+2016 \hskip 3em American Political Science Association, Annual Meeting, Philadelphia 
+
+2016 \hskip 3em Midwest Political Science Association, Annual Meeting, Chicago 
+
+2014 \hskip 3em International Political Economy Society, Annual Meeting, Washington D.C. 
+\fi
+
+
+\section*{\textsc{Grants, Awards and Fellowships}}
+
+\hangindent=7em
+2026--29 \hskip 1.3em``Developing the AI Sustainable Innovation Index (ASII): A Multi-Layered Cross-National Study of Social Acceptance and Innovation Sustainability'' \textit{National Research Foundation of Korea}, Collaborative Research Program (Co-Investigator) \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 300,000,000 (approx. USD 200K)]
+
+\hangindent=7em
+2025--27 \hskip 1.3em``Public Preferences and Political Accountability for Multinational Corporations' Foreign Direct Investment (FDI)'' \textit{National Research Foundation of Korea}, Young Researcher Program (Principal Investigator) \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 44,436,000 (approx. USD 30K)]
+
+\hangindent=7em
+2025--26 \hskip 1.3em``Developing the AI Sustainable Innovation Index (YASII): Integrating Social Acceptance and Innovation Sustainability'' \textit{AI Innovation Research Institute, Yonsei University} (Co-Investigator) \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 65,000,000 (approx. USD 43K)]
+
+\hangindent=7em
+2023--28 \hskip 1.3em``Climate Adaptation Living Lab'' \textit{Yonsei University} (Principal Investigator) \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 6,600,000,000 (approx. USD 4.4M)]
+
+\hangindent=7em
+2020--26 \hskip 1.3em``New Democracy in New Normal'' \textit{Social Sciences Korea (SSK)}, Research Team Support (Co-Investigator) [With Wonbin Cho, Yunmin Nam, Nam Kyu Kim, Hyungchul Kim, Myungse Kang, Dongsuk Kim, and Kooyeon Chung] \\
+\hspace{5cm}   $\bullet$ Research Grant [Annually KRW 230,000,000 (approx. USD 153K)]
+
+\hangindent=7em 
+2021--25 \hskip 1.3em``Understanding Oil Producers' Responses to the Renewable Energy Transition (OPRET).'' \textit{The Research Council of Norway}, 324628 - FORSKER21 (Co-Investigator). [With Brian Blankenship, Johannes Urpelainan, Indra Overland, Stella Tsani, and Nina Poussenkova] \\
+\hspace{2.5cm}  $\bullet$ Research Grant [NOK 11002K)] 
+
+\hangindent=7em 
+2023 \hskip 2.92em ``Public Attitudes toward Japan and China'' \textit{Ministry of Foreign Affairs}, Research Project (Principal Investigator)  [With Inbok Rhee, Sung Eun Kim, and Jong Hee Park] \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 25,000,000 (approx. USD 17K)]
+
+\hangindent=7em 
+2022 \hskip 2.92em ``Comprehensive Study of Korean National Image '' \textit{KDI School of Public Policy and Management}, Research Project (Co-Investigator)  [With Inbok Rhee, Sung Eun Kim, and Jong Hee Park] \\
+\hspace{5cm}  $\bullet$ Research Grant [KRW 150,000,000 (approx. USD 100K)]
+
+\hangindent=7em 
+2022 \hskip 2.92em ``Empirical Study on the Effectiveness of Educational Public Diplomacy Efforts in Korea'' \textit{KDI School of Public Policy and Management}, Research Project (Co-Investigator)  [With Inbok Rhee, Chungshik Moon, and Hye Young Chang] \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 50,000,000 (approx. USD 33K)]
+
+\hangindent=7em 
+2020--21 \hskip 1.3em ``Informing Korea’s Soft Power Strategy: Evidence from Survey Experiments on Public Perceptions of Public Diplomacy and Foreign Aid'' \textit{National Research Council for Economics, Humanities and Social Sciences}, Cooperative Research Series 21-09-01 (Co-Investigator)  [With Inbok Rhee, Sung Eun Kim, and Jong Hee Park] \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 210,000,000 (approx. USD 140K)] \\
+\hspace{2.5cm}  $\bullet$ Received Outstanding Research Award 
+
+
+\hangindent=7em 
+2021 \hskip 2.92em ``South Korea's Public Diplomacy Strategy for Battery, Bio, and Semi-conductor Sectors'' \textit{Ministry of Foreign Affairs}, Research Project (Principal Investigator)  [With Inbok Rhee, Sung Eun Kim, and Jong Hee Park] \\
+\hspace{2.5cm}  $\bullet$ Research Grant [KRW 25,000,000 (approx. USD 17K)]
+
+\hangindent=7em 
+2013--19 \hskip 1.3em \textsc{Dean's Fellow}, Columbia University 
+
+\hangindent=7em 
+2017 \hskip 2.92em \textsc{Foreign Policy Grant} (with Ashton S. Cho). ``Foreign Country Threat Framing and Voter Preferences Towards Multilateral FTAs'', Charles Koch Foundation
+
+
+2017 \hskip 2.92em \textsc{Dissertation Development Grant}, Columbia University
+%(\euro\texttt{2,000})
+%\years{2013} \textsc{Stanley Spivack Travel Grant}, Department of Sociology, Columbia University \\
+
+2012 \hskip 2.92em \textsc{Teaching Assistantship}, Columbia University School of International and Public Affairs
+
+2011 \hskip 2.92em \textsc{Casual Program Assistantship}, Columbia University School of International and Public Affairs
+
+2007 \hskip 2.92em \textsc{Honor Student Award}, Yonsei University
+
+\vspace{0.5em}
+{\small \textit{USD figures are approximate, converted at KRW 1,500/USD.}}
+
+\iffalse
+\section*{\textsc{Teaching Experience}}
+
+2021, 2022, 2023, 2024 \hskip 1em Domestic Politics and International Politics Seminar (G) \\
+2023 \hskip 6.5em Methods in Political Science Research (U, G)  \\
+%2022 \hskip 6.5em Introduction to American Government and Politics (U)  \\
+2022 \hskip 6.5em Experimental Methods and Causal Inference in Political Science (G) \\
+2021, 2022, 2023, 2024 \hskip 1em International Political Economy  (U, G) \\
+2020, 2021, 2022 \hskip 1em Environmental Politics (U, G) \\
+2023 \hskip 6.5em Political Economy of Trade and Investment (G)  \\
+\fi
+%\section*{\textsc{Research Assistantships}}
+
+%2016--18 \hskip 1.4em  \textsc{Robert Erikson}, Columbia University\\
+%2015--18 \hskip 1.4em  \textsc{Allison Carnegie}, Columbia University
+
+\section*{\textsc{Professional Activities}}
+
+2024-- \hskip 3.4em \textsc{Editorial Board Member}. International Studies Quarterly
+
+2022-- \hskip 3.4em \textsc{Policy Advisor}. Ministry of Foreign Affairs, Republic of Korea
+
+2021--22 \hskip 2.3em \textsc{Editorial Board Member}. Korean Political Science Review
+
+2021--22 \hskip 2.3em \textsc{Editorial Board Member}. New Asia
+
+2022 \hskip 4em \textsc{Member of Research Committee}. Korean Association of Party Studies
+
+%\hangindent=2cm
+%2018-- \hskip 2.3em \textsc{Student Fellow}. \textit{Initiative for Sustainable Energy Policy (ISEP)}, Johns Hopkins School of Advanced International Studies (SAIS).
+
+2008--10 \hskip 2.3em \textsc{Legislative Staff}. National Assembly of the Republic of Korea
+
+2004--06 \hskip 2.3em \textsc{Military Service}. Republic of Korea Army
+\\
+Peer Reviewer: \textit{American Journal of Political Science}, \textit{British Journal of Political Science}, \textit{Business and Politics}, \textit{Review of Policy Research}, \textit{State Politics \& Policy Quarterly}, \textit{Energy Policy}\\
+
+
+\section*{\textsc{Language and Other information}}
+
+Languages: English (Fluent); Korean (Native); French (Beginner)  
+
+Computer Skills: R, STATA,  Python, and \LaTeX 
+
+\iffalse
+\section*{\textsc{References}}
+
+\begin{tabular}{lr}
+% Referee 1
+\begin{minipage}[t]{3.5in}
+Robert S. Erikson\\
+Professor of Political Science\\
+Columbia University \\ 
+\textsc{rse14@columbia.edu}
+\end{minipage}
+%&
+% Referee 2
+\begin{minipage}[t]{3.5in}
+Justin H. Phillips\\
+Professor of Political Science\\
+Columbia University\\
+\textsc{jhp2121@columbia.edu} 
+\end{minipage}
+\\
+\\ % Additional newline for spacing.
+% Referee 3
+\begin{minipage}[t]{3.5in}
+Tonya L. Putnam\\
+Associate Professor of Political Science\\
+Columbia University \\ 
+\textsc{tp2202@columbia.edu}
+\end{minipage}
+%&
+\begin{minipage}[t]{3.5in}
+Allison J. Carnegie\\
+Associate Professor of Political Science\\
+Columbia University \\ 
+\textsc{allison.carnegie@columbia.edu}
+\end{minipage}
+\\
+\\ % Additional newline for spacing.
+\begin{minipage}[t]{3.5in}
+Johannes Urpelainen\\
+Prince Sultan bin Abdulaziz Professor of \\Energy, Resources and Environment\\
+Johns Hopkins SAIS \\ 
+\textsc{JohannesU@jhu.edu}
+\end{minipage}
+%&
+\begin{minipage}[t]{3.5in}
+Pablo M. Pinto\\
+Associate Professor\\
+Hobby School of Public Affairs, \\ University of Houston \\
+\textsc{ppinto@central.uh.edu}
+\end{minipage}
+\end{tabular}
+ \fi
+
+%\vspace{1cm}
+%\vfill{}
+%\hrulefill
+
+\end{document}

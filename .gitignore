@@ -19,3 +19,11 @@ beautiful-jekyll-theme-*.gem
 pic/PYK_1178_1.jpg
 pic/Yang_Pic2.png
 pic/Yang_Pic4.jpg
+
+# LaTeX 컴파일 산출물 및 CV 비교용 레이아웃 PDF (정본 PDF만 커밋)
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.synctex.gz
+cv/CV_JoonYang_2026Spring-pillar.pdf
+cv/CV_JoonYang_2026Spring-year.pdf
