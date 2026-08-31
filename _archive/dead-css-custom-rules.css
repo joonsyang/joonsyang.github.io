@@ -1,0 +1,102 @@
+/*
+ * custom.css에서 제거된 죽은 규칙 보존본 (2026-08-31, 1단계 CSS 정리)
+ * 무효 사유: 셀렉터가 요구하는 HTML 클래스(.page-research, .page-cv, .content-section)가
+ * 빌드 결과물 어디에도 출력되지 않음 — front matter의 class:/name: 키는 테마가 사용하지 않고,
+ * research.md에는 .content-section 래퍼가 없었음.
+ * 2단계에서 되살릴 경우 셀렉터를 실제 출력되는 클래스(.pub-list 등)로 바꿔서 사용할 것.
+ */
+
+/* Research와 CV 페이지 특별 스타일 */
+.page-research,
+.page-cv {
+padding-top: 45px !important;
+}
+
+.page-research .content-section,
+.page-cv .cv-page {
+margin-top: 0 !important;
+padding-top: 10px !important;
+}
+
+/* Research page styles */
+.content-section {
+max-width: 900px;
+margin: 0 auto;
+}
+
+/* Publication list styles */
+.content-section ul {
+list-style: none;
+padding-left: 0;
+}
+
+.content-section li {
+margin-bottom: 1.5rem;
+text-align: left;
+line-height: 1.6;
+}
+
+/* Link indent and style */
+.content-section li a {
+margin-left: 1em;
+color: #666;
+font-size: 0.9em;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.content-section li a:hover {
+color: #2F3438;
+text-decoration: underline;
+}
+
+/* Journal name style */
+.content-section em {
+font-style: italic;
+color: #666;
+}
+
+/* Co-authors style */
+.content-section li [class^="with"] {
+color: #666;
+font-size: 0.95em;
+}
+
+/* Heading styles */
+.content-section h2 {
+margin-top: 2rem;
+margin-bottom: 2rem;
+font-size: 1.75rem;
+color: #2F3438;
+}
+
+/* Mobile responsiveness (원래 @media (max-width: 768px) 블록 내부에 있던 규칙) */
+@media (max-width: 768px) {
+.content-section {
+  padding: 0 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.content-section li {
+  margin-bottom: 1.5rem !important;
+  padding: 0 !important;
+}
+
+.content-section li a {
+  margin-left: 0 !important;
+  display: block !important;
+  margin-top: 0.5em !important;
+}
+}
+
+/*
+ * (추가 보존, 2026-08-31) beautifuljekyll.css 복원 시 custom.css로 이전하지 않은 규칙.
+ * 사유: custom.css의 더 높은 specificity 규칙에 항상 패배(padding, margin-left)했거나,
+ * 대상 요소가 display:none(navbar-brand)이라 렌더링에 관여한 적이 없음.
+ */
+/*
+.navbar-custom { padding: 0 !important; }
+.navbar-custom .navbar-brand { padding-left: 20px !important; }
+.navbar-expand-xl .navbar-nav { margin-left: auto !important; }
+*/

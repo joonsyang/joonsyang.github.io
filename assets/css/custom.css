@@ -19,18 +19,6 @@ body {
 padding-top: 30px !important;
 }
 
-/* Research와 CV 페이지 특별 스타일 */
-.page-research,
-.page-cv {
-padding-top: 45px !important;
-}
-
-.page-research .content-section,
-.page-cv .cv-page {
-margin-top: 0 !important;
-padding-top: 10px !important;
-}
-
 /* 네비게이션 링크 스타일 */
 html body .navbar-custom .nav-link,
 .navbar-custom .nav-link,
@@ -56,6 +44,11 @@ justify-content: center !important;
 .navbar-custom .nav-link:focus,
 .navbar-custom .nav-link.active {
 color: #FFFFFF !important;
+}
+
+/* 마지막 메뉴 항목 우측 여백 (beautifuljekyll.css 직접 수정분에서 이전) */
+.navbar-custom .nav-item:last-child {
+padding-right: 20px;
 }
 
 /* 모바일 대응 */
@@ -90,77 +83,8 @@ body {
 }
 }
 
-/* Research page styles */
-.content-section {
-max-width: 900px;
-margin: 0 auto;
-}
-
-/* Publication list styles */
-.content-section ul {
-list-style: none;
-padding-left: 0;
-}
-
-.content-section li {
-margin-bottom: 1.5rem;
-text-align: left;
-line-height: 1.6;
-}
-
-/* Link indent and style */
-.content-section li a {
-margin-left: 1em;
-color: #666;
-font-size: 0.9em;
-text-decoration: none;
-transition: color 0.2s ease;
-}
-
-.content-section li a:hover {
-color: #2F3438;
-text-decoration: underline;
-}
-
-/* Journal name style */
-.content-section em {
-font-style: italic;
-color: #666;
-}
-
-/* Co-authors style */
-.content-section li [class^="with"] {
-color: #666;
-font-size: 0.95em;
-}
-
-/* Heading styles */
-.content-section h2 {
-margin-top: 2rem;
-margin-bottom: 2rem;
-font-size: 1.75rem;
-color: #2F3438;
-}
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-.content-section {
-  padding: 0 20px !important;
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.content-section li {
-  margin-bottom: 1.5rem !important;
-  padding: 0 !important;
-}
-
-.content-section li a {
-  margin-left: 0 !important;
-  display: block !important;
-  margin-top: 0.5em !important;
-}
-
 a[href^="mailto"],
 a[href^="tel"] {
   display: block !important;
@@ -185,4 +109,21 @@ font-size: 1.1em;
 .cv-page a:hover {
 color: #2F3438;
 text-decoration: underline;
+}
+
+/* ================================================================
+   beautifuljekyll.css 직접 수정분 이전 (테마 파일은 업스트림 원본으로 복원)
+   ================================================================ */
+
+/* footer 소셜 아이콘 줄 간격: 테마 기본 1.375rem/항목 0.5rem 대신 넓은 하단 여백 */
+footer .list-inline {
+margin-bottom: 1.875rem;
+}
+footer .list-inline .list-inline-item {
+margin-bottom: 0;
+}
+
+/* 소셜 공유 버튼 링크 색 */
+#social-share-section a {
+color: #fff;
 }
