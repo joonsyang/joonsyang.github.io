@@ -49,13 +49,13 @@
         {%- unless forloop.last %}, {% endunless -%}
       {%- endfor -%}.
     </span>
-    <span class="pub-title">&ldquo;{% if pub.language == "ko" and pub.title_original %}{{ pub.title_original }}{% else %}{{ pub.title }}{% endif %}.&rdquo;</span>
+    <span class="pub-title">{% if pub.language == "ko" and pub.title_original %}<span lang="ko">&ldquo;{{ pub.title_original }}.&rdquo;</span>{% else %}&ldquo;{{ pub.title }}.&rdquo;{% endif %}</span>
     {%- if pub.language == "ko" and pub.title_original == nil %} <span class="pub-lang">(In Korean)</span>{% endif %}
     <span class="pub-venue">
       {%- if pub.status == "forthcoming" -%}
-        <em>{{ pub.journal }}</em> (forthcoming)
+        <em>{{ pub.journal }}</em> <span class="pub-flag">Forthcoming</span>
       {%- elsif pub.status == "under-review" -%}
-        Revise and Resubmit, <em>{{ pub.journal }}</em>
+        <span class="pub-flag">Revise and Resubmit</span>, <em>{{ pub.journal }}</em>
       {%- else -%}
         <em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}{% if pub.pages %}: {{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}
       {%- endif -%}.
