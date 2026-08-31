@@ -76,6 +76,17 @@ main a:hover {
   text-decoration-thickness: 2px;
 }
 
+/* 키보드 포커스 표시 (AUDIT: focus-visible) */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+.navbar-custom a:focus-visible,
+.navbar-custom button:focus-visible {
+  outline-color: var(--c-bg); /* 어두운 navbar 위에서는 흰 포커스 링 */
+}
+
 /* 본문 폭 제한 (구 .content-section 900px 규칙의 부활) */
 .page-inner {
   width: 100%; /* 부모 .row(flex) 안에서 전폭 확보 */
@@ -124,6 +135,26 @@ html body .navbar-custom .nav-link,
 
 .navbar-custom .nav-item:last-child {
   padding-right: 20px;
+}
+
+/* AUDIT: 햄버거 아이콘 — navbar-light(어두운 아이콘) + 진회색 배경 조합으로
+   보이지 않던 문제. 밝은 아이콘으로 교체 (SVG data URI라 토큰 사용 불가, 흰색 고정) */
+.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* navbar 접힘 구간(<1200px, navbar-expand-xl 기준)의 메뉴 스타일
+   — 기존 768px 기준과 접힘 기준 불일치(AUDIT) 해소 */
+@media (max-width: 1199.98px) {
+  .navbar-custom .navbar-nav {
+    text-align: center !important;
+  }
+  .navbar-custom .nav-link {
+    padding: var(--sp-2) var(--sp-3) !important;
+  }
 }
 
 /* ---------- 논문 목록 (publication-list.html) ---------- */
@@ -241,11 +272,17 @@ footer .list-inline .list-inline-item {
     padding-top: 60px;
   }
 
-  .navbar-custom .navbar-nav {
-    text-align: center !important;
+  /* AUDIT: 전폭 사용 */
+  .page-inner {
+    max-width: 100%;
+    padding: 0 var(--sp-3);
   }
-  .navbar-custom .nav-link {
-    padding: var(--sp-2) var(--sp-3) !important;
+
+  /* AUDIT: 링크 블록 처리 */
+  .pub-link {
+    display: block;
+    margin-top: var(--sp-1);
+    white-space: normal;
   }
 
   a[href^="mailto"],
