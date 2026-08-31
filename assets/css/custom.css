@@ -296,6 +296,47 @@ html body .navbar-custom .nav-link,
   border-top: 1px solid var(--c-border);
 }
 
+/* ---------- Projects 페이지 ---------- */
+.project {
+  border-top: 1px solid var(--c-border);
+  padding-top: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.project-title {
+  margin-top: 0;
+  margin-bottom: var(--sp-1);
+}
+
+.project-title-ko {
+  font-size: var(--fs-small);
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-2);
+}
+
+.project-meta {
+  font-size: var(--fs-small);
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-2);
+}
+
+.project-summary {
+  margin-bottom: var(--sp-2);
+}
+
+.project-pubs-label {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  margin-bottom: var(--sp-1);
+}
+
+.project-pubs,
+.project-links {
+  font-size: var(--fs-small);
+  padding-left: var(--sp-3);
+  margin-bottom: 0;
+}
+
 /* ---------- CV 페이지 ---------- */
 .cv-download {
   display: inline-block;

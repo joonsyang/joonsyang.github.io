@@ -12,8 +12,9 @@ author: JOONSEOK YANG
 ###############################################
 navbar-links:
   HOME: "/"
-  CV: "cv"
   RESEARCH: "research"
+  PROJECTS: "projects"
+  CV: "cv"
 
 # 기존 navbar 색상 설정 제거 또는 수정
 navbar-col: ""

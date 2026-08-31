@@ -1,0 +1,59 @@
+# _data/projects.yml — Projects 페이지 데이터 (funded research)
+# 원칙:
+#  - 연구비 금액 필드는 두지 않는다 (웹 비노출 방침 — 데이터에 없으면 노출 불가)
+#  - status: active / upcoming / completed 명시 관리. upcoming은 status_label로 시작 시점 표기
+#  - related_publications: _data/publications.yml 항목의 id 슬러그 참조 (lazy id 방식)
+#  - summary 문안은 초안 상태 — 사용자가 다듬을 예정
+
+# CV Grants 항목과 동기화: "Climate Adaptation Living Lab" (2023--28, PI)
+- id: living-lab
+  title: "Climate Adaptation Living Lab"
+  title_ko: "연세대학교 기후적응 리빙랩 연구사업단"
+  funder: "Yonsei University"
+  program:
+  role: "Principal Investigator"
+  period: "Mar 2023 – Dec 2028"
+  status: active
+  summary: "A five-year interdisciplinary program that builds and runs living labs — collaborative spaces where residents, local governments, and firms jointly define adaptation problems and test solutions in place. My work develops the field-experimental design and measures whether participatory adaptation planning changes what people are willing to do and support."
+  related_publications: []   # TODO: 연결할 논문 id를 알려주시면 등록
+  links: []
+
+# CV Grants 항목과 동기화: "Public Preferences and Political Accountability for MNCs' FDI" (2025--27, PI)
+- id: fdi-preferences
+  title: "Public Preferences and Political Accountability for Multinational Corporations' Foreign Direct Investment"
+  title_ko: "다국적 기업의 해외직접투자에 대한 대중 선호와 정치 책임성"
+  funder: "National Research Foundation of Korea"
+  program: "Young Researcher Program"
+  role: "Principal Investigator"
+  period: "Jun 2025 – May 2027"
+  status: active
+  summary: "Governments compete to attract multinational firms, but we know little about what the public actually wants from that competition, or whether voters hold anyone responsible for the outcome. This project uses conjoint and factorial experiments in South Korea to identify which firm and project attributes drive public support, and whether inbound and outbound investment are judged by different standards."
+  related_publications: []   # TODO
+  links: []
+
+# CV Grants 항목과 동기화: "Developing the AI Sustainable Innovation Index (YASII)" (2025--26, Co-I)
+- id: yasii
+  title: "Developing the AI Sustainable Innovation Index (YASII)"
+  title_ko: "AI 지속가능혁신의 국가별 측정 지표 개발"
+  funder: "AI Innovation Research Institute, Yonsei University"
+  program:
+  role: "Co-Investigator"
+  period: "Nov 2025 – Nov 2026"
+  status: active
+  summary: "A pilot study measuring how AI innovation is socially accepted and whether that acceptance is sustainable, across Korea, the United States, Japan, and China. I lead the survey design and cross-national comparison, including an experiment testing whether government certification changes public trust in AI systems relative to private self-regulation."
+  related_publications: []   # TODO
+  links: []
+
+# CV Grants 항목과 동기화: "Developing the AI Sustainable Innovation Index (ASII)" (2026--29, Co-I)
+- id: asii
+  title: "Developing the AI Sustainable Innovation Index (ASII)"
+  title_ko: "AI 지속가능혁신지수 개발"
+  funder: "National Research Foundation of Korea"
+  program: "Collaborative Research Program"
+  role: "Co-Investigator"
+  period: "Jun 2026 – May 2029"
+  status: upcoming
+  status_label: "Starting Jun 2026"
+  summary: "A three-year extension of this agenda to ten countries, asking whether rapid adoption of AI and its long-run sustainability move together or pull apart. I lead the comparative survey design and the experiments on institutional trust and information provision."
+  related_publications: []   # TODO
+  links: []

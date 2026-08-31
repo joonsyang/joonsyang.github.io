@@ -51,7 +51,7 @@
 {%- else -%}
 <ul class="pub-list">
   {%- for pub in ordered -%}
-  <li class="pub-item">
+  <li class="pub-item"{% if pub.id %} id="pub-{{ pub.id }}"{% endif %}>
     <span class="pub-authors">
       {%- for a in pub.authors -%}
         {%- if a == "Joonseok Yang" -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
