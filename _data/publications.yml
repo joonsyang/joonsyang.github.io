@@ -652,26 +652,26 @@
 
 # ===== In Review (대상 저널 비공개 — CV .tex Under Review에서 이관) =====
 
-# pillar: opinion (확정)  # TODO: 저자 순서·DOI 확인 대기 (사용자 제공 예정)
-- title: "Participatory Process, Anti-Elitism, and Legitimacy Beliefs in Local Policy-Making: Evidence from a Survey Experiment in South Korea"
+# pillar: opinion (확정)  # FirstView (2026-04-08 온라인)  # TODO: DOI는 추정값 — 확정 필요
+- title: "Participatory process, anti-elitism, and legitimacy beliefs in local policy-making: evidence from a survey experiment in South Korea"
   title_former: "Public Perceptions of Civil Participation in the Policymaking Process: Evidence from Survey Experiment in South Korea"
-  authors: [Joonseok Yang, Wonbin Cho, Nam Kyu Kim, Yoonmin Nam]
+  authors: [Nam Kyu Kim, Yunmin Nam, Joonseok Yang, Wonbin Cho]
   journal: "European Political Science Review"
   volume:
   issue:
-  pages:
-  year:
-  doi:
+  pages: "1-18"
+  year: 2026
+  doi: "10.1017/S1755773926100411"
   url:
   language: en
-  status: forthcoming
+  status: published
   pillar: opinion
   selected: false
 
-# pillar: opinion (확정)  # TODO: 저자 순서·페이지·DOI 확인 대기 (사용자 제공 예정)
-- title: "Effect of International Organizations' Direct Engagement with the Public: Information Source Credibility and the Public's Attitudes towards COVID-19-Related Measures"
+# pillar: opinion (확정)  # TODO: 페이지·DOI 확인 대기
+- title: "Effect of international organizations' direct engagement with the public: information source credibility and the public's attitudes towards COVID-19-related measures"
   title_former: "Effect of International Organizations' Direct Engagement with the Public: Information Source Effect, IO Legitimacy, and Public Opinion"
-  authors: [Joonseok Yang, Byungwon Woo, Nam Kyu Kim]
+  authors: [Nam Kyu Kim, Joonseok Yang, Byungwon Woo]
   journal: "Japanese Journal of Political Science"
   volume: 27
   issue: 1
@@ -701,15 +701,15 @@
   pillar: business
   selected: false
 
-# pillar: opinion (확정 — working-paper/other에서 변경)  # TODO: 저자 순서·DOI 확인 대기 (사용자 제공 예정)
+# pillar: opinion (확정 — working-paper/other에서 변경)  # TODO: DOI 확인 대기
 - title: "Partisan Rationalization and Evaluations of (Un)Democratic Behaviors: The Amplifying Role of Affective Polarization"
   title_former: "Political Polarization and Undemocratic Behavior Bias: Evidence from Survey Experiment in South Korea"
-  authors: [Joonseok Yang, Wonbin Cho, Nam Kyu Kim, Yoonmin Nam]
+  authors: [Nam Kyu Kim, Yunmin Nam, Joonseok Yang, Wonbin Cho]
   journal: "Political Studies"
   volume:
   issue:
   pages:
-  year:
+  year: 2026
   doi:
   url:
   language: en
@@ -719,7 +719,7 @@
 
 # pillar: other (확정)  # 저자 순서 미확인 (tex 나열 기준)
 - title: "Public Support for Judicial Reform: Partisan Bias and Source Effects"
-  authors: [Joonseok Yang, Wonbin Cho, Nam Kyu Kim, Yoonmin Nam]
+  authors: [Joonseok Yang, Wonbin Cho, Nam Kyu Kim, Yunmin Nam]
   journal:
   volume:
   issue:
