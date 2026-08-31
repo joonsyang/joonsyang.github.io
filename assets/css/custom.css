@@ -348,5 +348,6 @@ footer .list-inline .list-inline-item {
   }
   .home-photo {
     max-width: 400px;
+    margin: 0 auto; /* 스택 구간(≤768px) 전체에서 사진 중앙 정렬 */
   }
 }
