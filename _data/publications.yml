@@ -239,9 +239,8 @@
   selected: false
 
 # pillar: env-energy / environment-trade-transition (확정)  # 저자 순서 미확인 (DOI 없음)
-# TODO: title_original에 한국어 원제 기입 필요 (기입 전까지는 영문 제목 + "(In Korean)"으로 렌더링)
 - title: "Environmental Perception and Public Attitudes toward Nuclear Energy in South Korea"
-  title_original:
+  title_original: "환경 문제에 대한 인식과 원자력 에너지에 대한 태도"
   authors: [Joonseok Yang, Kyuhee Park]
   journal: "East and West Studies"
   volume: 35
