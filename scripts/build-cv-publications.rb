@@ -37,11 +37,17 @@ end
 
 def venue_numbers(pub)
   vol = pub["volume"]
-  return "" unless vol
-  s = ", #{vol}"
-  s += "(#{pub['issue']})" if pub["issue"]
-  s += ": #{tex_escape(pub['pages'])}" if pub["pages"]
-  s
+  pages = pub["pages"]
+  if vol
+    s = ", #{vol}"
+    s += "(#{pub['issue']})" if pub["issue"]
+    s += ": #{tex_escape(pages)}" if pages
+    s
+  elsif pages
+    ", #{tex_escape(pages)}" # FirstView 등 권호 미정 + 페이지만 있는 경우
+  else
+    ""
+  end
 end
 
 def korean_mark(pub)
