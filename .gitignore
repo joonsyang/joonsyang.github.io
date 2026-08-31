@@ -14,3 +14,8 @@ ehthumbs.db
 Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
+
+# pic/ 원본 중 웹에 쓰지 않는 대용량 파일 (마스터 Yang_Pic.jpg, 크롭 대안 Yang_Pic3.jpg만 추적)
+pic/PYK_1178_1.jpg
+pic/Yang_Pic2.png
+pic/Yang_Pic4.jpg

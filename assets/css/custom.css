@@ -244,6 +244,52 @@ html body .navbar-custom .nav-link,
   margin-bottom: var(--sp-2);
 }
 
+/* ---------- 홈 프로필 레이아웃 ---------- */
+.home-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 400px) 1fr;
+  gap: var(--sp-4);
+  align-items: start;
+  margin-top: var(--sp-4);
+}
+
+.home-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-contact {
+  margin-top: var(--sp-2);
+}
+.home-contact p {
+  margin: var(--sp-1) 0;
+  font-size: var(--fs-small);
+  color: var(--c-text-muted);
+}
+
+.home-intro h1 {
+  margin: 0 0 var(--sp-1);
+}
+
+.home-role {
+  font-size: var(--fs-h4);
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-1);
+}
+
+.home-affiliation {
+  font-size: var(--fs-base);
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-4);
+}
+
+.home-pillars {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--c-border);
+}
+
 /* ---------- CV 페이지 ---------- */
 .cv-page a {
   font-size: var(--fs-h4);
@@ -293,5 +339,14 @@ footer .list-inline .list-inline-item {
 
   .pub-cards {
     grid-template-columns: 1fr;
+  }
+
+  /* 홈: 사진 위, 텍스트 아래 */
+  .home-profile {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+  .home-photo {
+    max-width: 400px;
   }
 }
