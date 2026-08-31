@@ -239,7 +239,9 @@
   selected: false
 
 # pillar: env-energy / environment-trade-transition (확정)  # 저자 순서 미확인 (DOI 없음)
+# TODO: title_original에 한국어 원제 기입 필요 (기입 전까지는 영문 제목 + "(In Korean)"으로 렌더링)
 - title: "Environmental Perception and Public Attitudes toward Nuclear Energy in South Korea"
+  title_original:
   authors: [Joonseok Yang, Kyuhee Park]
   journal: "East and West Studies"
   volume: 35
@@ -619,10 +621,9 @@
   pillar: opinion
   selected: false
 
-# pillar: opinion (확정)  # TODO: 저자·정식 제목 확인 필요 (소스 C 미제공 — CV에도 없음.
-# 사용자 지시문 표기는 "How Language Affects Survey Response: Kenya")
-- title: "How Language Affects Survey Response: Evidence from Kenya"
-  authors: [Joonseok Yang]
+# pillar: opinion (확정)
+- title: "How Language Affects Survey Response: Experimental Evidence from Kenya"
+  authors: [Inbok Rhee, Joonseok Yang]
   journal: "Public Opinion Quarterly"
   volume:
   issue:
