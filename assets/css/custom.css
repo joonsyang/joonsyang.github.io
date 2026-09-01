@@ -297,16 +297,17 @@ html body .navbar-custom .nav-link,
   margin: 0 0 var(--sp-1);
 }
 
+/* 이름·직함·소속 블록 — 테마의 문단 기본 마진(상하 1.875rem)을 눌러 촘촘하게 */
 .home-role {
   font-size: var(--fs-h4);
   color: var(--c-text-muted);
-  margin-bottom: var(--sp-1);
+  margin: 0 0 var(--sp-1);
 }
 
 .home-affiliation {
   font-size: var(--fs-base);
   color: var(--c-text-muted);
-  margin-bottom: var(--sp-4);
+  margin: 0 0 var(--sp-4);
 }
 
 .home-pillars {
