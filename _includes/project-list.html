@@ -28,18 +28,8 @@
       &middot; {{ p.period }} &middot; {{ p.role }} &middot; {{ p.funder }}{% if p.program %} ({{ p.program }}){% endif %}
     </p>
     <p class="project-summary">{{ p.summary }}</p>
-    {%- assign refs = p.related_publications | default: empty_array -%}
-    {%- if refs and refs.size > 0 %}
-    <p class="project-pubs-label">Related publications:</p>
-    <ul class="project-pubs">
-      {%- for ref in refs -%}
-        {%- assign pub = site.data.publications | where: "id", ref | first -%}
-        {%- if pub %}
-      <li><a href="{{ '/research' | relative_url }}#pub-{{ pub.id }}">{{ pub.title }}</a>{% if pub.year %} ({{ pub.year }}){% endif %}</li>
-        {%- endif -%}
-      {%- endfor %}
-    </ul>
-    {%- endif %}
+    {%- comment -%} 관련 논문 블록은 표시하지 않는다 (2026-09 결정).
+        projects.yml의 related_publications 데이터는 추후 재사용 대비로 유지. {%- endcomment -%}
     {%- if p.links and p.links.size > 0 %}
     <ul class="project-links">
       {%- for l in p.links -%}
