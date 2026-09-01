@@ -34,8 +34,11 @@
 {%- if include.mode == "cards" -%}
 <div class="pub-cards">
   {%- for pub in ordered -%}
+  {%- assign pub_href = "" -%}
+  {%- if pub.doi -%}{%- assign pub_href = "https://doi.org/" | append: pub.doi -%}
+  {%- elsif pub.url -%}{%- assign pub_href = pub.url -%}{%- endif -%}
   <div class="pub-card">
-    <div class="pub-card-title">&ldquo;{{ pub.title }}&rdquo;</div>
+    <div class="pub-card-title">{% if pub_href != "" %}<a href="{{ pub_href }}" target="_blank" rel="noopener">{% endif %}&ldquo;{{ pub.title }}&rdquo;{% if pub_href != "" %}</a>{% endif %}</div>
     <div class="pub-card-venue"><em>{{ pub.journal }}</em>{% if pub.year %}, {{ pub.year }}{% endif %}</div>
     <div class="pub-card-authors">
       {%- for a in pub.authors -%}
@@ -43,14 +46,15 @@
         {%- unless forloop.last %}, {% endunless -%}
       {%- endfor -%}
     </div>
-    {%- if pub.doi %}<a class="pub-link" href="https://doi.org/{{ pub.doi }}">[Link]</a>
-    {%- elsif pub.url %}<a class="pub-link" href="{{ pub.url }}">[Link]</a>{% endif %}
   </div>
   {%- endfor -%}
 </div>
 {%- else -%}
 <ul class="pub-list">
   {%- for pub in ordered -%}
+  {%- assign pub_href = "" -%}
+  {%- if pub.doi -%}{%- assign pub_href = "https://doi.org/" | append: pub.doi -%}
+  {%- elsif pub.url -%}{%- assign pub_href = pub.url -%}{%- endif -%}
   <li class="pub-item"{% if pub.id %} id="pub-{{ pub.id }}"{% endif %}>
     <span class="pub-authors">
       {%- for a in pub.authors -%}
@@ -58,7 +62,12 @@
         {%- unless forloop.last %}, {% endunless -%}
       {%- endfor -%}.
     </span>
-    <span class="pub-title">{% if pub.language == "ko" and pub.title_original %}<span lang="ko">&ldquo;{{ pub.title_original }}.&rdquo;</span>{% else %}&ldquo;{{ pub.title }}.&rdquo;{% endif %}</span>
+    {%- comment -%} 제목이 ?/!로 끝나면 마침표를 겹치지 않는다 (CV 생성기와 동일 규칙) {%- endcomment -%}
+    {%- assign disp_title = pub.title -%}
+    {%- if pub.language == "ko" and pub.title_original -%}{%- assign disp_title = pub.title_original -%}{%- endif -%}
+    {%- assign t_last = disp_title | slice: -1, 1 -%}
+    {%- capture t_dot %}{% unless t_last == "?" or t_last == "!" %}.{% endunless %}{% endcapture -%}
+    <span class="pub-title">{% if pub_href != "" %}<a href="{{ pub_href }}" target="_blank" rel="noopener">{% endif %}{% if pub.language == "ko" and pub.title_original %}<span lang="ko">&ldquo;{{ disp_title }}{{ t_dot }}&rdquo;</span>{% else %}&ldquo;{{ disp_title }}{{ t_dot }}&rdquo;{% endif %}{% if pub_href != "" %}</a>{% endif %}</span>
     {%- if pub.language == "ko" and pub.title_original == nil %} <span class="pub-lang">(In Korean)</span>{% endif %}
     {%- unless pub.status == "working-paper" -%}
     <span class="pub-venue">
@@ -73,8 +82,6 @@
       {%- endif -%}.
     </span>
     {%- endunless -%}
-    {%- if pub.doi %} <a class="pub-link" href="https://doi.org/{{ pub.doi }}">[Link]</a>
-    {%- elsif pub.url %} <a class="pub-link" href="{{ pub.url }}">[Link]</a>{% endif %}
   </li>
   {%- endfor -%}
 </ul>

@@ -204,10 +204,11 @@ html body .navbar-custom .nav-link,
   color: var(--c-text-muted);
 }
 
-/* DOI/URL 링크 — 색만으로 구분하지 않도록 밑줄 유지 + 대괄호 텍스트 병행 */
-.pub-link {
-  font-size: var(--fs-small);
-  white-space: nowrap;
+/* 논문 제목 링크 (DOI/url) — 굵은 세리프 제목이라 밑줄을 가늘게, 오프셋은 넉넉히 */
+.pub-title a,
+.pub-card-title a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
 }
 
 /* forthcoming / Revise and Resubmit 라벨 */
@@ -375,13 +376,6 @@ footer .list-inline .list-inline-item {
   .page-inner {
     max-width: 100%;
     padding: 0 var(--sp-3);
-  }
-
-  /* AUDIT: 링크 블록 처리 */
-  .pub-link {
-    display: block;
-    margin-top: var(--sp-1);
-    white-space: normal;
   }
 
   a[href^="mailto"],
