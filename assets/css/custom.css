@@ -260,6 +260,12 @@ html body .navbar-custom .nav-link,
 }
 
 /* ---------- 홈 프로필 레이아웃 ---------- */
+
+/* 홈 전용: 컨테이너를 넓혀 사진이 더 왼쪽에서 시작하고 본문 칼럼 몫이 커지게 */
+.page-inner:has(.home-profile) {
+  max-width: 1080px;
+}
+
 .home-profile {
   display: grid;
   grid-template-columns: minmax(0, 320px) 1fr;
@@ -281,6 +287,10 @@ html body .navbar-custom .nav-link,
   margin: var(--sp-1) 0;
   font-size: var(--fs-small);
   color: var(--c-text-muted);
+}
+
+.home-intro {
+  max-width: 620px; /* 본문 줄 길이가 80자를 크게 넘지 않도록 상한 */
 }
 
 .home-intro h1 {
