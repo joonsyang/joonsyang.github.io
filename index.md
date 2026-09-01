@@ -9,10 +9,10 @@ keywords: "Joonseok Yang, Yonsei university, Politics, Political Science"
     <picture>
       <source type="image/webp"
               srcset="/assets/img/profile-800.webp 800w, /assets/img/profile-1600.webp 1600w"
-              sizes="(max-width: 768px) calc(100vw - 2rem), 400px">
+              sizes="(max-width: 768px) min(100vw - 2rem, 320px), 320px">
       <img src="/assets/img/profile-800.jpg"
            srcset="/assets/img/profile-800.jpg 800w, /assets/img/profile-1600.jpg 1600w"
-           sizes="(max-width: 768px) calc(100vw - 2rem), 400px"
+           sizes="(max-width: 768px) min(100vw - 2rem, 320px), 320px"
            width="800" height="1000"
            alt="Portrait of Joonseok Yang, Assistant Professor of Political Science at Yonsei University"
            loading="eager" fetchpriority="high">
