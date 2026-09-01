@@ -30,7 +30,7 @@ keywords: "Joonseok Yang, Yonsei university, Politics, Political Science"
 
     <p>I am an Assistant Professor in the Department of Political Science &amp; International Studies at Yonsei University, Seoul, South Korea.</p>
 
-    <p>My research examines how organized economic interests and mass publics shape economic policy, and how citizens hold governments accountable for the outcomes. I work primarily with survey and conjoint experiments, often fielded across multiple countries, combined with observational data on firms, elections, and policy. My work is forthcoming or has appeared in the <em>American Journal of Political Science</em>, <em>British Journal of Political Science</em>, <em>Comparative Political Studies</em>, <em>Journal of Policy Analysis and Management</em>, and <em>World Development</em>, among others.</p>
+    <p>My research examines how organized economic interests and mass publics shape economic policy, and how citizens hold governments accountable for the outcomes. My work is forthcoming or has appeared in the <em>American Journal of Political Science</em>, <em>British Journal of Political Science</em>, <em>Comparative Political Studies</em>, <em>Journal of Policy Analysis and Management</em>, and <em>World Development</em>, among others.</p>
 
     <p>I completed my Ph.D. in Political Science at Columbia University, where I also received an M.A. in International Affairs from the School of International &amp; Public Affairs (2012). Before graduate school, I worked for over two years as a legislative staff member in the National Assembly of the Republic of Korea. I hold a B.A. in Political Science and French from Yonsei University. I currently serve as a policy advisor to the Ministry of Foreign Affairs.</p>
 
