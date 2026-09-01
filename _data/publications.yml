@@ -131,8 +131,7 @@
   subgroup: subsidies-social-contract
   selected: false
 
-# pillar: env-energy / subsidies-social-contract (확정)  # 저자 순서 Crossref 확인 완료
-# (주의: Crossref는 공저자를 "Christian Lisko"로 표기 — CV의 "Calvin Lisko"와 불일치, 확인 필요)
+# pillar: env-energy / subsidies-social-contract (확정)  # 저자 순서 Crossref 확인 완료 (Lisko 표기는 "Calvin"으로 확정)
 - title: "When Do Petrostates Diversify Their Exports? Urgency, Interests, and Policy Design in Egypt, Kazakhstan, and Malaysia"
   authors: [Brian Blankenship, Calvin Lisko, Indra Overland, Johannes Urpelainen, Roman Vakulchuk, Joonseok Yang]
   journal: "Development Policy Review"
@@ -673,7 +672,7 @@
   pillar: opinion
   selected: false
 
-# pillar: opinion (확정)  # TODO: 페이지·DOI 확인 대기
+# pillar: opinion (확정)  # DOI 미등록 — 링크 없이 표기
 - title: "Effect of international organizations' direct engagement with the public: information source credibility and the public's attitudes towards COVID-19-related measures"
   title_former: "Effect of International Organizations' Direct Engagement with the Public: Information Source Effect, IO Legitimacy, and Public Opinion"
   authors: [Nam Kyu Kim, Joonseok Yang, Byungwon Woo]
