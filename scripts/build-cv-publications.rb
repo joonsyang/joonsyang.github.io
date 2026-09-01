@@ -102,7 +102,8 @@ end
 STATUS_ORDER = { "forthcoming" => 0, "under-review" => 1, "in-review" => 2, "published" => 3 }.freeze
 
 def pillar_sort(list)
-  list.sort_by { |p| [STATUS_ORDER.fetch(p["status"], 9), -(p["year"] || 0).to_i] }
+  # Ruby sort_by는 불안정 정렬 — 동일 키(연도 없는 R&R 등)에서 yml 순서가 보존되도록 인덱스를 보조 키로 사용
+  list.each_with_index.sort_by { |p, i| [STATUS_ORDER.fetch(p["status"], 9), -(p["year"] || 0).to_i, i] }.map(&:first)
 end
 
 PILLARS = [

@@ -25,8 +25,10 @@
   {%- assign pubs_w = pubs | where: "status", "working-paper" -%}
   {%- assign ordered = pubs_i | concat: pubs_w -%}
 {%- else -%}
-  {%- assign pubs_f = pubs | where: "status", "forthcoming" | sort: "year", "last" | reverse -%}
-  {%- assign pubs_r = pubs | where: "status", "under-review" | sort: "year", "last" | reverse -%}
+  {%- comment -%} forthcoming/under-review는 연도가 없거나 불완전해 sort|reverse가
+      yml 순서를 뒤집는 부작용이 있음 — yml에 적힌 순서를 그대로 쓴다 (CV 생성기와 동일 규칙) {%- endcomment -%}
+  {%- assign pubs_f = pubs | where: "status", "forthcoming" -%}
+  {%- assign pubs_r = pubs | where: "status", "under-review" -%}
   {%- assign pubs_p = pubs | where: "status", "published" | sort: "year", "last" | reverse -%}
   {%- assign ordered = pubs_f | concat: pubs_r | concat: pubs_p -%}
 {%- endif -%}
