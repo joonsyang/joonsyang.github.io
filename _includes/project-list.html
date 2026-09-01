@@ -1,0 +1,52 @@
+{% comment %}
+  project-list.html — _data/projects.yml 렌더링.
+  정렬: active → upcoming → completed (그룹 내에서는 yml 순서 유지).
+  status 라벨: active=Ongoing / completed=Completed / upcoming=status_label(기본 "Upcoming").
+  related_publications: publications.yml의 id 슬러그 → 제목·연도 표시 + /research#pub-<id> 앵커 링크.
+  연구비 금액은 데이터에 존재하지 않으며 렌더링하지 않는다.
+{% endcomment %}
+{%- assign proj_a = site.data.projects | where: "status", "active" -%}
+{%- assign proj_u = site.data.projects | where: "status", "upcoming" -%}
+{%- assign proj_c = site.data.projects | where: "status", "completed" -%}
+{%- assign ordered = proj_a | concat: proj_u | concat: proj_c -%}
+
+<div class="project-list">
+  {%- for p in ordered -%}
+  <article class="project">
+    <h3 class="project-title">{{ p.title }}</h3>
+    {%- if p.title_ko %}
+    <p class="project-title-ko" lang="ko">{{ p.title_ko }}</p>
+    {%- endif %}
+    <p class="project-meta">
+      {%- if p.status == "active" -%}
+        <span class="pub-flag">Ongoing</span>
+      {%- elsif p.status == "upcoming" -%}
+        <span class="pub-flag">{{ p.status_label | default: "Upcoming" }}</span>
+      {%- else -%}
+        <span class="pub-flag">Completed</span>
+      {%- endif %}
+      &middot; {{ p.period }} &middot; {{ p.role }} &middot; {{ p.funder }}{% if p.program %} ({{ p.program }}){% endif %}
+    </p>
+    <p class="project-summary">{{ p.summary }}</p>
+    {%- assign refs = p.related_publications | default: empty_array -%}
+    {%- if refs and refs.size > 0 %}
+    <p class="project-pubs-label">Related publications:</p>
+    <ul class="project-pubs">
+      {%- for ref in refs -%}
+        {%- assign pub = site.data.publications | where: "id", ref | first -%}
+        {%- if pub %}
+      <li><a href="{{ '/research' | relative_url }}#pub-{{ pub.id }}">{{ pub.title }}</a>{% if pub.year %} ({{ pub.year }}){% endif %}</li>
+        {%- endif -%}
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- if p.links and p.links.size > 0 %}
+    <ul class="project-links">
+      {%- for l in p.links -%}
+      <li><a href="{{ l.url }}">{{ l.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </article>
+  {%- endfor -%}
+</div>

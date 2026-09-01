@@ -12,8 +12,9 @@ author: JOONSEOK YANG
 ###############################################
 navbar-links:
   HOME: "/"
-  CV: "cv"
   RESEARCH: "research"
+  PROJECTS: "projects"
+  CV: "cv"
 
 # 기존 navbar 색상 설정 제거 또는 수정
 navbar-col: ""
@@ -32,7 +33,7 @@ text-col: "#404040"
 link-col: "#666666"
 
 # Layout settings
-title-on-all-pages: false
+title-on-all-pages: true   # 서브페이지 <title>에 "페이지명 | 사이트명" 형식 적용
 round-avatar: false
 
 ###########################
@@ -55,12 +56,21 @@ exclude:
   - README.md
   - _posts/
   - docs/
+  # 내부 작업 파일 — 사이트로 복사·공개되면 안 됨
+  - cv/
+  - pic/
+  - scripts/
+  - AUDIT.md
+  - CLAUDE.md
+  # 테마 개발용 잔재
+  - Appraisals
+  - beautiful-jekyll-theme.gemspec
+  - staticman.yml
+  - screenshot.png
 
 site-css:
   - "/assets/css/custom.css"
   
-title-separator: " | "
-
 title: JOONSEOK YANG
 
 description: "Joonseok Yang, Assistant Professor in Political Science. Explore my research, publications, and CV."
@@ -68,13 +78,23 @@ description: "Joonseok Yang, Assistant Professor in Political Science. Explore m
 author: Joonseok Yang
 url: "https://joonsyang.github.io"
 
-# SEO 관련 설정
+# SEO 관련 설정 (jekyll-seo-tag가 사용)
 lang: en
 locale: en_US
 social:
   name: Joonseok Yang
   links:
     - https://github.com/joonsyang
+
+# 소셜 카드: 전 페이지 기본 og:image. 이미지가 4:5 세로형이라 twitter:card는 summary
+# (작은 정방 썸네일)로 지정 — 1.91:1 전용 og 이미지를 만들면 summary_large_image로 승격 검토.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/profile-800.jpg
+      twitter:
+        card: summary
 
 # SEO 태그와 사이트맵 활성화
 plugins:

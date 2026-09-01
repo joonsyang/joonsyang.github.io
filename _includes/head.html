@@ -20,41 +20,20 @@
     {%- endif -%}
   {% endcapture %}
 
-  {% capture description %}
-    {%- if page.share-description -%}
-      {{ page.share-description | strip_html | xml_escape }}
-    {%- elsif page.subtitle -%}
-      {{ page.subtitle | strip_html | xml_escape }}
-    {%- else -%}
-      {%- assign excerpt_length = site.excerpt_length | default: 50 -%}
-      {{ page.content | strip_html | xml_escape | truncatewords: excerpt_length | strip }}
-    {%- endif -%}
-  {% endcapture %}
-
   <title>{{ title }}</title>
 
-  {% capture author %}
-    {%- if page.author -%}
-      {{  page.author | strip_html }}
-    {%- elsif site.author -%}
-      {{ site.author }}
-    {%- endif -%}
-  {% endcapture %}
-  {% if author != "" %}
-  <meta name="author" content="{{ author }}">
-  {% endif %}
-
-  <meta name="description" content="{{ site.description | escape }}">
+  {% comment %}
+    사이트 커스텀: description/canonical/og/twitter/JSON-LD는 jekyll-seo-tag가 단일 소스로 출력한다
+    (title=false: <title>은 위 테마 로직 유지). 페이지별 description은 front matter 우선, 없으면 site.description.
+    테마의 자체 description·og·twitter·canonical 블록은 중복 방지를 위해 제거했음.
+  {% endcomment %}
+  {% seo title=false %}
 
   {% if site.mobile-theme-col %}
   <meta name="theme-color" content="{{ site.mobile-theme-col }}">
   {% endif %}
 
-  {% if site.keywords %}
-  <meta name="keywords" content="joon yang, joonseok yang, political science, yonsei, ipe, phd">
-  {% endif %}
 
-  
   {% if site.rss-description %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
   {% endif %}
@@ -99,68 +78,16 @@
   <meta property="fb:app_id" content="{{ site.fb_app_id }}">
   {% endif %}
 
-  {% if site.title %}
-  <meta property="og:site_name" content="{{ site.title }}">
-  {% endif %}
-
-  {%- capture img -%}
-    {%- if page.share-img -%}
-      {{ page.share-img }}
-    {%- elsif page.cover-img -%}
-      {%- if page.cover-img.first -%}
-        {{ page.cover-img[0].first.first }}
-      {%- else -%}
-        {{ page.cover-img }}
-      {%- endif -%}
-    {%- elsif page.thumbnail-img -%}
-      {{ page.thumbnail-img }}
-    {%- elsif site.avatar -%}
-      {{ site.avatar }}
-    {% endif %}
-  {%- endcapture -%}
-  {%- assign img=img | strip -%}
-
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ description }}">
-
-  {% if img != "" %}
-  <meta property="og:image" content="{{ img | absolute_url }}">
-  {% endif %}
-
-  {% if page.id %}
-  <meta property="og:type" content="article">
-  {% if author != "" %}
-  <meta property="og:article:author" content="{{ author }}">
-  {% endif %}
-  <meta property="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  {% else %}
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
-  <link rel="canonical" href="{{ page.url | absolute_url | strip_index }}">
-  {% endif %}
-
-  {% if img != "" and img != site.avatar %}
-  <meta name="twitter:card" content="summary_large_image">
-  {% else %}
-  <meta name="twitter:card" content="summary">
-  {% endif %}
-  <meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
-  <meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
-
-  <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description" content="{{ description }}">
-
-  {% if img != "" %}
-  <meta name="twitter:image" content="{{ img | absolute_url }}">
-  {% endif %}
-
   {% include matomo.html %}
 
   {% if page.comments and site.staticman.repository and site.staticman.branch %}
   <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
   {% endif %}
+
+  {% comment %} 사이트 커스텀 파비콘 (A안): SVG 우선, PNG 폴백, apple-touch-icon. 재생성: scripts/build-favicons.sh {% endcomment %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 
   {% assign favicon_exists = site.static_files | where: "path", "/favicon.ico" | size %}
   {% if favicon_exists == 1 %}

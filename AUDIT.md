@@ -1,6 +1,45 @@
 # joonsyang.github.io 사이트 감사 (AUDIT)
 
 > Audited on 2026-08-31 against upstream Beautiful Jekyll master snapshot (gemspec: 6.0.1).
+> **상태: 리디자인 완료 (2026-09-01)** — 아래 감사 항목은 redesign 브랜치에서 전부 해소됨.
+
+## 해결 현황 (2026-09-01 갱신)
+
+| 감사 항목 | 상태 | 해결 커밋 |
+|---|---|---|
+| meta description "Associate→Assistant" 오기 | ✅ | `8bdbdc4` (hotfix, master 배포됨) |
+| aboutme 테마 데모 페이지 공개 | ✅ | `3496a2e` (hotfix, master 배포됨) |
+| 모바일 햄버거 아이콘 비가시 | ✅ | `559b2c1` |
+| 모바일 ≤768px 전폭·링크 처리 | ✅ | `559b2c1` (링크는 이후 `9bc5dd3`에서 제목 링크로 재설계) |
+| navbar 브레이크포인트 불일치 (768 vs 1200) | ✅ | `559b2c1` |
+| 키보드 focus-visible 부재 | ✅ | `559b2c1` — 2026-09-01 computed style 실측으로 검증 완료 |
+| 테이블 모바일 가로 스크롤 제거 | ✅ | `8173415` (업스트림 규칙 복원) |
+| beautifuljekyll.css 직접 수정 (업데이트 유실 위험) | ✅ | `8173415` (원본 복원, 커스텀은 custom.css로 이전) |
+| 죽은 CSS (custom-styles.css, .content-section, .page-*) | ✅ | `8173415` (_archive에 보존) |
+| 무효 Bootstrap 클래스 offset-xl-1.5 | ✅ | `cc9f7e5` |
+| 본문 900px 폭 제한 사멸 | ✅ | `cc9f7e5` (.page-inner + 디자인 토큰) |
+| index.md 인라인 스타일 | ✅ | `a107b9d` |
+| 2257px 원본 이미지 직접 로드 | ✅ | `a107b9d` (picture/srcset, webp) |
+| 링크 색-만-구분 (WCAG 1.4.1) | ✅ | `cc9f7e5` + `9bc5dd3` |
+| `{% seo %}` 미적용 (JSON-LD 부재) | ✅ | `e810518` |
+| og:image·favicon 부재 | ✅ | `e810518` |
+| 서브페이지 title 사이트명 누락 / title-separator 죽은 키 | ✅ | `e810518` |
+| 죽은 keywords 메타, 전 페이지 동일 description | ✅ | `e810518` |
+| CV PDF iframe (모바일 열람 불가, title 없음, 모호한 링크) | ✅ | `32d9fad` (HTML + 다운로드 버튼) |
+| cv.md 죽은 front matter (name:/class:) | ✅ | `32d9fad` |
+| 상단 여백 중복 (body padding + intro-header) | ✅ | `32d9fad` |
+| 구 CV PDF(2024) sitemap 노출 | ✅ | `32d9fad` (삭제) |
+| 이메일·전화 링크화 + 이모지 접근성 | ✅ | `f8d0eab` |
+| tags.html 빈 페이지 | ✅ | `f8d0eab` (삭제) |
+| 404 사우스파크 데모 | ✅ | `f8d0eab` (미니멀 404로 교체) |
+| feed.xml·social-networks-links 업스트림 지연 | ✅ | `f8d0eab` |
+| sitemap의 구글 확인 파일 | ✅ | `f8d0eab` (sitemap: false, 검증 내용 불변) |
+| 논문 목록 하드코딩 (유지보수 취약) | ✅ | `0f0160a` 외 — publications.yml 단일 소스화 (사이트+CV) |
+| 한국어 논문 원제 부재 | ✅ | `6e44138` |
+
+**미해결로 남는 항목** (데이터 대기, 구조 아님):
+- EEEP 논문(Are Credit Rating Agencies…)의 `url` — 발행처(IAEE) 논문 페이지 링크 확보 시 연결
+- projects.yml `summary` 4건 — 초안 상태, 문안 다듬기 예정
 
 - 감사일: 2026-08-31
 - 기준: Beautiful Jekyll 업스트림과의 diff + 로컬 빌드(`bundle exec jekyll build`) 결과물(`_site/`) 검증

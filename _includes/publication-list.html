@@ -1,0 +1,88 @@
+{% comment %}
+  publication-list.html — renders publications from _data/publications.yml.
+  Params:
+    include.pillar   — filter by pillar key (business / opinion / env-energy / other)
+    include.subgroup — filter by env-energy subgroup key
+    include.selected — true to show only selected publications
+    include.mode     — "cards" for card layout (Selected Work); default is a list
+    include.working  — true for the Working Papers section: renders in-review
+                       ("Under Review" 라벨) + working-paper 항목만. 기둥 렌더링에는
+                       이 두 status가 포함되지 않는다 (CV의 섹션 구조와 동일하게 유지).
+  Ordering (기둥): forthcoming → under-review (Revise and Resubmit) → published, then year desc.
+{% endcomment %}
+{%- assign pubs = site.data.publications -%}
+{%- if include.selected -%}
+  {%- assign pubs = pubs | where: "selected", true -%}
+{%- endif -%}
+{%- if include.pillar -%}
+  {%- assign pubs = pubs | where: "pillar", include.pillar -%}
+{%- endif -%}
+{%- if include.subgroup -%}
+  {%- assign pubs = pubs | where: "subgroup", include.subgroup -%}
+{%- endif -%}
+{%- if include.working -%}
+  {%- assign pubs_i = pubs | where: "status", "in-review" -%}
+  {%- assign pubs_w = pubs | where: "status", "working-paper" -%}
+  {%- assign ordered = pubs_i | concat: pubs_w -%}
+{%- else -%}
+  {%- assign pubs_f = pubs | where: "status", "forthcoming" | sort: "year", "last" | reverse -%}
+  {%- assign pubs_r = pubs | where: "status", "under-review" | sort: "year", "last" | reverse -%}
+  {%- assign pubs_p = pubs | where: "status", "published" | sort: "year", "last" | reverse -%}
+  {%- assign ordered = pubs_f | concat: pubs_r | concat: pubs_p -%}
+{%- endif -%}
+
+{%- if include.mode == "cards" -%}
+<div class="pub-cards">
+  {%- for pub in ordered -%}
+  {%- assign pub_href = "" -%}
+  {%- if pub.doi -%}{%- assign pub_href = "https://doi.org/" | append: pub.doi -%}
+  {%- elsif pub.url -%}{%- assign pub_href = pub.url -%}{%- endif -%}
+  <div class="pub-card">
+    <div class="pub-card-title">{% if pub_href != "" %}<a href="{{ pub_href }}" target="_blank" rel="noopener">{% endif %}&ldquo;{{ pub.title }}&rdquo;{% if pub_href != "" %}</a>{% endif %}</div>
+    <div class="pub-card-venue"><em>{{ pub.journal }}</em>{% if pub.year %}, {{ pub.year }}{% endif %}</div>
+    <div class="pub-card-authors">
+      {%- for a in pub.authors -%}
+        {%- if a == "Joonseok Yang" -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endfor -%}
+</div>
+{%- else -%}
+<ul class="pub-list">
+  {%- for pub in ordered -%}
+  {%- assign pub_href = "" -%}
+  {%- if pub.doi -%}{%- assign pub_href = "https://doi.org/" | append: pub.doi -%}
+  {%- elsif pub.url -%}{%- assign pub_href = pub.url -%}{%- endif -%}
+  <li class="pub-item"{% if pub.id %} id="pub-{{ pub.id }}"{% endif %}>
+    <span class="pub-authors">
+      {%- for a in pub.authors -%}
+        {%- if a == "Joonseok Yang" -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}.
+    </span>
+    {%- comment -%} 제목이 ?/!로 끝나면 마침표를 겹치지 않는다 (CV 생성기와 동일 규칙) {%- endcomment -%}
+    {%- assign disp_title = pub.title -%}
+    {%- if pub.language == "ko" and pub.title_original -%}{%- assign disp_title = pub.title_original -%}{%- endif -%}
+    {%- assign t_last = disp_title | slice: -1, 1 -%}
+    {%- capture t_dot %}{% unless t_last == "?" or t_last == "!" %}.{% endunless %}{% endcapture -%}
+    <span class="pub-title">{% if pub_href != "" %}<a href="{{ pub_href }}" target="_blank" rel="noopener">{% endif %}{% if pub.language == "ko" and pub.title_original %}<span lang="ko">&ldquo;{{ disp_title }}{{ t_dot }}&rdquo;</span>{% else %}&ldquo;{{ disp_title }}{{ t_dot }}&rdquo;{% endif %}{% if pub_href != "" %}</a>{% endif %}</span>
+    {%- if pub.language == "ko" and pub.title_original == nil %} <span class="pub-lang">(In Korean)</span>{% endif %}
+    {%- unless pub.status == "working-paper" -%}
+    <span class="pub-venue">
+      {%- if pub.status == "forthcoming" -%}
+        <em>{{ pub.journal }}</em> <span class="pub-flag">Forthcoming</span>
+      {%- elsif pub.status == "under-review" -%}
+        <span class="pub-flag">Revise and Resubmit</span>, <em>{{ pub.journal }}</em>
+      {%- elsif pub.status == "in-review" -%}
+        <span class="pub-flag">Under Review</span>{% if pub.journal %}, <em>{{ pub.journal }}</em>{% endif %}
+      {%- else -%}
+        <em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}{% if pub.pages %}{% if pub.volume %}: {% else %} {% endif %}{{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}
+      {%- endif -%}.
+    </span>
+    {%- endunless -%}
+  </li>
+  {%- endfor -%}
+</ul>
+{%- endif -%}
