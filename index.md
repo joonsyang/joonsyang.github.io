@@ -32,7 +32,14 @@ keywords: "Joonseok Yang, Yonsei university, Politics, Political Science"
 
     <p>I completed my Ph.D. in Political Science at Columbia University. Prior to graduate school, I worked as a legislative staff in the National Assembly of the Republic of Korea for over two years. I received an M.A. in International Affairs (2012) from the School of International &amp; Public Affairs (SIPA), Columbia University, and a B.A. in Political Science and French from Yonsei University in Seoul, South Korea. I currently serve as a policy advisor to the Ministry of Foreign Affairs, Republic of Korea.</p>
 
-    <!-- TODO: 세 연구 기둥으로 가는 링크로 교체할 자리 -->
-    <p class="home-pillars"><em>[Placeholder: links to the three research pillars — Business &amp; Economic Policymaking / Public Opinion in Global Politics / Environment &amp; Energy]</em></p>
+    <div class="home-pillars">
+      <p>My research examines how organized economic interests and mass publics shape economic policy, and how citizens hold governments accountable for the outcomes. I work primarily with survey and conjoint experiments, often fielded across multiple countries, combined with observational data on firms, elections, and policy.</p>
+      <p class="home-pillar-links">
+        <a href="{{ '/research' | relative_url }}#business-interest-groups-and-economic-policymaking">Business &amp; Economic Policymaking</a> &middot;
+        <a href="{{ '/research' | relative_url }}#public-opinion-in-global-politics">Public Opinion in Global Politics</a> &middot;
+        <a href="{{ '/research' | relative_url }}#political-economy-of-environment-and-energy">Environment &amp; Energy</a> &middot;
+        <a href="{{ '/projects' | relative_url }}">Projects</a>
+      </p>
+    </div>
   </div>
 </div>

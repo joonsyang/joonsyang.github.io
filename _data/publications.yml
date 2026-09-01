@@ -9,6 +9,7 @@
 
 # pillar: business (확정)  # 저자 순서 미확인 (DOI 없음)
 - title: "Substitutes for Rule of Law? How BITs Deepen But Do Not Broaden US Investment in Developing Countries"
+  id: ii-bits
   authors: [Abhit Bhandari, Joonseok Yang]
   journal: "International Interactions"
   volume: 51
@@ -148,6 +149,7 @@
 
 # pillar: business (확정)
 - title: "Why Compete for Firms?: Electoral Effects of Corporate Headquarters Relocation"
+  id: ajps-firms
   authors: [Joonseok Yang]
   journal: "American Journal of Political Science"
   volume: 68
@@ -179,6 +181,7 @@
 
 # pillar: env-energy / environment-trade-transition (확정)
 - title: "Clearing the Air: Public Health Concerns and Support for Natural Gas Restrictions in the United States"
+  id: erss-clearing-air
   authors: [Elena V. McLean, Taehee Whang, Joonseok Yang]
   journal: "Energy Research & Social Science"
   volume: 108
@@ -304,6 +307,7 @@
 
 # pillar: env-energy / climate-accountability (확정)
 - title: "Barking Up the Wrong Tree: Retrospective Voting, Natural Disasters, and Electoral Backlash"
+  id: cps-disasters
   authors: [Brian Blankenship, Ryan Kennedy, Johannes Urpelainen, Joonseok Yang]
   journal: "Comparative Political Studies"
   volume: 54
@@ -734,6 +738,7 @@
 
 # pillar: opinion (확정)  # 저자 순서 미확인 (tex 나열 기준)
 - title: "To Stay or to Go? Sources of Domestic Support for Foreign Direct Investment in Kenya"
+  id: wp-kenya-fdi
   authors: [Joonseok Yang, Inbok Rhee]
   journal:
   volume:
@@ -749,6 +754,7 @@
 
 # pillar: opinion (확정)
 - title: "Public Opinion Toward the Relocation of Multinational Corporations: Evidence from Survey Experiment in South Korea"
+  id: wp-mnc-relocation
   authors: [Joonseok Yang]
   journal:
   volume:
@@ -779,6 +785,7 @@
 
 # pillar: env-energy / climate-accountability (확정)  # 저자 순서 미확인 (tex 나열 기준)
 - title: "Electoral Effects of Natural Disaster: Evidence from South Korea"
+  id: wp-disaster-korea
   authors: [Joonseok Yang, Kyuhee Park]
   journal:
   volume:
