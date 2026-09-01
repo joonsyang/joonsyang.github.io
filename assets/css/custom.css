@@ -129,16 +129,17 @@ html body .navbar-custom .nav-link,
   text-decoration: none;
 }
 
+/* 브랜드(사이트명, 홈 링크) — 테마가 site.title로 렌더링. 어두운 navbar 위 흰색 */
 .navbar-custom .navbar-brand {
-  display: none !important; /* 브랜드(로고) 숨김 */
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding-left: 20px;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: #FFFFFF !important;
 }
 
-.navbar-custom .navbar-nav {
-  margin: 0 auto !important; /* 메뉴 중앙 정렬 */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
+/* 메뉴 우측 정렬은 테마 기본(ml-auto)을 그대로 사용 — 중앙정렬 override 제거됨 */
 
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link:focus,
@@ -259,11 +260,17 @@ html body .navbar-custom .nav-link,
 }
 
 /* ---------- 홈 프로필 레이아웃 ---------- */
+
+/* 홈 전용: 컨테이너를 넓혀 사진이 더 왼쪽에서 시작하고 본문 칼럼 몫이 커지게 */
+.page-inner:has(.home-profile) {
+  max-width: 1080px;
+}
+
 .home-profile {
   display: grid;
-  grid-template-columns: minmax(0, 400px) 1fr;
+  grid-template-columns: minmax(0, 320px) 1fr;
   gap: var(--sp-4);
-  align-items: start;
+  align-items: start; /* 사진·연락처는 상단 고정, 왼쪽 칼럼 아래는 비워 둔다 */
   margin-top: var(--sp-4);
 }
 
@@ -280,6 +287,10 @@ html body .navbar-custom .nav-link,
   margin: var(--sp-1) 0;
   font-size: var(--fs-small);
   color: var(--c-text-muted);
+}
+
+.home-intro {
+  max-width: 620px; /* 본문 줄 길이가 80자를 크게 넘지 않도록 상한 */
 }
 
 .home-intro h1 {
@@ -395,7 +406,7 @@ footer .list-inline .list-inline-item {
     gap: var(--sp-3);
   }
   .home-photo {
-    max-width: 400px;
+    max-width: 320px;
     margin: 0 auto; /* 스택 구간(≤768px) 전체에서 사진 중앙 정렬 */
   }
 }

@@ -1,7 +1,7 @@
 ############################
 # --- Basic settings --- #
 ############################
-title: "JOONSEOK YANG"
+title: "Joonseok Yang"
 author: JOONSEOK YANG
 
 ###############################################
@@ -11,7 +11,6 @@ author: JOONSEOK YANG
 # --- Navigation --- #
 ###############################################
 navbar-links:
-  HOME: "/"
   RESEARCH: "research"
   PROJECTS: "projects"
   CV: "cv"
@@ -71,7 +70,7 @@ exclude:
 site-css:
   - "/assets/css/custom.css"
   
-title: JOONSEOK YANG
+title: Joonseok Yang
 
 description: "Joonseok Yang, Assistant Professor in Political Science. Explore my research, publications, and CV."
 
