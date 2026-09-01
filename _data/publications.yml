@@ -767,35 +767,3 @@
   status: working-paper
   pillar: opinion
   selected: false
-
-# pillar: other (확정)  # 저자 순서 미확인 (tex 나열 기준)
-- title: "Trust in Blockchain Voting"
-  authors: [Joonseok Yang, Yesola Kwon]
-  journal:
-  volume:
-  issue:
-  pages:
-  year:
-  doi:
-  url:
-  language: en
-  status: working-paper
-  pillar: other
-  selected: false
-
-# pillar: env-energy / climate-accountability (확정)  # 저자 순서 미확인 (tex 나열 기준)
-- title: "Electoral Effects of Natural Disaster: Evidence from South Korea"
-  id: wp-disaster-korea
-  authors: [Joonseok Yang, Kyuhee Park]
-  journal:
-  volume:
-  issue:
-  pages:
-  year:
-  doi:
-  url:
-  language: en
-  status: working-paper
-  pillar: env-energy
-  subgroup: climate-accountability
-  selected: false
