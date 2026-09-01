@@ -18,8 +18,8 @@ keywords: "Joonseok Yang, Yonsei university, Politics, Political Science"
            loading="eager" fetchpriority="high">
     </picture>
     <div class="home-contact">
-      <p>✉️ joonseok.yang@yonsei.ac.kr</p>
-      <p>📞 82-02-2123-2954</p>
+      <p><span aria-hidden="true">✉️</span> <a href="mailto:joonseok.yang@yonsei.ac.kr">joonseok.yang@yonsei.ac.kr</a></p>
+      <p><span aria-hidden="true">📞</span> <a href="tel:+82-2-2123-2954">82-02-2123-2954</a></p>
     </div>
   </div>
 
