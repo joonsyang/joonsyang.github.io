@@ -93,6 +93,13 @@ button:focus-visible {
   margin-top: var(--sp-4);
 }
 
+/* 앵커 이동 시 고정 navbar에 타깃이 가려지지 않도록 여유 확보 */
+.pub-item[id],
+h2[id],
+h3[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* 본문 폭 제한 (구 .content-section 900px 규칙의 부활) */
 .page-inner {
   width: 100%; /* 부모 .row(flex) 안에서 전폭 확보 */
