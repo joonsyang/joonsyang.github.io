@@ -560,6 +560,22 @@
 
 # ===== Forthcoming =====
 
+# pillar: opinion (확정 — working-paper/other에서 변경)  # TODO: DOI 확인 대기
+- title: "Partisan Rationalization and Evaluations of (Un)Democratic Behaviors: The Amplifying Role of Affective Polarization"
+  title_former: "Political Polarization and Undemocratic Behavior Bias: Evidence from Survey Experiment in South Korea"
+  authors: [Nam Kyu Kim, Yunmin Nam, Joonseok Yang, Wonbin Cho]
+  journal: "Political Studies"
+  volume:
+  issue:
+  pages:
+  year: 2026
+  doi:
+  url:
+  language: en
+  status: forthcoming
+  pillar: opinion
+  selected: false
+
 # pillar: opinion (확정)  # CV .tex에는 미수록 (저자 순서 대조 불가 — 사용자 제공 순서 채택)
 - title: "The Trump Effect in the Asia-Pacific"
   authors: [Sung Eun Kim, Jong Hee Park, Inbok Rhee, Joonseok Yang]
@@ -592,11 +608,11 @@
 
 # ===== Under Review =====
 
-# pillar: business (확정)  # CV .tex의 "Belligerence Benefits..." 항목과 동일 논문 (구 제목 → title_former)
-- title: "Rewarding Belligerence: Public Opinion and Audience Costs in Trade Conflicts"
-  title_former: "Belligerence Benefits: Public Opinion and Audience Costs in Trade Wars"
-  authors: [Ashton Hyun Seung Cho, Joonseok Yang]
-  journal: "International Interactions"
+# pillar: opinion (확정)  # CV .tex working paper "Public Opinion on Foreign Disaster Aid"와 동일 논문 (구 제목 → title_former)
+- title: "When Disasters Strike Abroad: How Geopolitics and Empathy Shape Public Support for International Disaster Aid"
+  title_former: "Public Opinion on Foreign Disaster Aid"
+  authors: [Muhammet Bas, Elena V. McLean, Ömer Faruk Örsün, Joonseok Yang]
+  journal: "Review of International Organizations"
   volume:
   issue:
   pages:
@@ -605,14 +621,14 @@
   url:
   language: en
   status: under-review
-  pillar: business
+  pillar: opinion
   selected: false
 
-# pillar: opinion (확정)  # CV .tex working paper "Public Opinion on Foreign Disaster Aid"와 동일 논문 (구 제목 → title_former)
-- title: "When Disasters Strike Abroad: How Geopolitics and Empathy Shape Public Support for International Disaster Aid"
-  title_former: "Public Opinion on Foreign Disaster Aid"
-  authors: [Muhammet Bas, Elena V. McLean, Ömer Faruk Örsün, Joonseok Yang]
-  journal: "Review of International Organizations"
+# pillar: opinion (2026-09-02 business에서 변경)  # CV .tex의 "Belligerence Benefits..." 항목과 동일 논문 (구 제목 → title_former)
+- title: "Rewarding Belligerence: Public Opinion and Audience Costs in Trade Conflicts"
+  title_former: "Belligerence Benefits: Public Opinion and Audience Costs in Trade Wars"
+  authors: [Ashton Hyun Seung Cho, Joonseok Yang]
+  journal: "International Interactions"
   volume:
   issue:
   pages:
@@ -703,22 +719,6 @@
   language: en
   status: working-paper
   pillar: business
-  selected: false
-
-# pillar: opinion (확정 — working-paper/other에서 변경)  # TODO: DOI 확인 대기
-- title: "Partisan Rationalization and Evaluations of (Un)Democratic Behaviors: The Amplifying Role of Affective Polarization"
-  title_former: "Political Polarization and Undemocratic Behavior Bias: Evidence from Survey Experiment in South Korea"
-  authors: [Nam Kyu Kim, Yunmin Nam, Joonseok Yang, Wonbin Cho]
-  journal: "Political Studies"
-  volume:
-  issue:
-  pages:
-  year: 2026
-  doi:
-  url:
-  language: en
-  status: forthcoming
-  pillar: opinion
   selected: false
 
 # pillar: other (확정)  # 저자 순서 미확인 (tex 나열 기준)
